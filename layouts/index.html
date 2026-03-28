@@ -1,0 +1,43 @@
+{{ define "main" }}
+  <section class="hero">
+    <p class="eyebrow">Macro / All Weather / Research System</p>
+    <h1>{{ site.Title }}</h1>
+    <p class="hero-copy">{{ site.Params.tagline }}</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="{{ "posts/" | relURL }}">阅读博客</a>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head">
+      <div>
+        <p class="eyebrow">Latest</p>
+        <h2>最新文章</h2>
+      </div>
+      <a class="text-link" href="{{ "posts/" | relURL }}">查看全部</a>
+    </div>
+
+    <div class="post-grid">
+      {{ range first 6 (where site.RegularPages "Section" "posts").ByDate.Reverse }}
+        <article class="post-card">
+          <p class="eyebrow">{{ .Date.Format "2006-01-02" }}</p>
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p>{{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 120 }}{{ end }}</p>
+          <a class="text-link" href="{{ .RelPermalink }}">继续阅读</a>
+        </article>
+      {{ else }}
+        <article class="post-card">
+          <p class="eyebrow">Empty</p>
+          <h3>还没有文章</h3>
+          <p>先在 <code>content/posts/</code> 新增一篇 Markdown 文章。</p>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+
+  {{ with .Content }}
+    <section class="panel prose">
+      {{ . }}
+    </section>
+  {{ end }}
+{{ end }}

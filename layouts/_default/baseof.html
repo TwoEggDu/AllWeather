@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="{{ site.LanguageCode }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | {{ site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else with .Params.summary }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+  <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="{{ "/" | relURL }}">
+        <span class="brand-mark">AW</span>
+        <span class="brand-copy">
+          <strong>{{ site.Title }}</strong>
+          <span>{{ site.Params.subtitle }}</span>
+        </span>
+      </a>
+      <nav class="site-nav">
+        <a href="{{ "/" | relURL }}">首页</a>
+        <a href="{{ "posts/" | relURL }}">博客</a>
+      </nav>
+    </header>
+
+    <main class="site-main">
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer class="site-footer">
+      <p>{{ site.Params.tagline }}</p>
+      <p>{{ site.Params.repoNote }}</p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+baseURL = "https://example.org/"
+languageCode = "zh-cn"
+title = "All Weather"
+defaultContentLanguage = "zh-cn"
+hasCJKLanguage = true
+enableRobotsTXT = true
+
+[pagination]
+pagerSize = 10
+
+[params]
+description = "围绕宏观、全天候组合与风险管理的研究型博客。"
+tagline = "把宏观叙事写成规则，把规则落实为仓位。"
+subtitle = "研究、组合、风控、复盘"
+repoNote = "更完整的研究底稿仍保留在仓库原有的中文文档目录里。"

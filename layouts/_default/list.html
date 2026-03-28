@@ -1,0 +1,19 @@
+{{ define "main" }}
+  <section class="page-heading">
+    <p class="eyebrow">Archive</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}
+      <div class="lede prose">{{ . }}</div>
+    {{ end }}
+  </section>
+
+  <section class="stack">
+    {{ range .Pages.ByDate.Reverse }}
+      <article class="stack-item">
+        <p class="eyebrow">{{ .Date.Format "2006-01-02" }}</p>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <p>{{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}</p>
+      </article>
+    {{ end }}
+  </section>
+{{ end }}
