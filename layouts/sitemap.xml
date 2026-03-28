@@ -1,0 +1,24 @@
+{{- $pages := slice site.Home -}}
+{{- range site.Sections -}}
+  {{- $pages = $pages | append . -}}
+{{- end -}}
+{{- range site.RegularPages -}}
+  {{- if eq .Section "posts" -}}
+    {{- if and (eq .Params.status "published") (not .Draft) -}}
+      {{- $pages = $pages | append . -}}
+    {{- end -}}
+  {{- else if not .Draft -}}
+    {{- $pages = $pages | append . -}}
+  {{- end -}}
+{{- end -}}
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {{ range $pages }}
+    <url>
+      <loc>{{ .Permalink }}</loc>
+      {{ with .Lastmod }}<lastmod>{{ .Format "2006-01-02T15:04:05-07:00" }}</lastmod>{{ end }}
+      {{ with .Sitemap.ChangeFreq }}<changefreq>{{ . }}</changefreq>{{ end }}
+      {{ if ge .Sitemap.Priority 0.0 }}<priority>{{ printf "%.1f" .Sitemap.Priority }}</priority>{{ end }}
+    </url>
+  {{ end }}
+</urlset>

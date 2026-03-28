@@ -1,7 +1,19 @@
 {{ define "main" }}
   {{ $posts := where site.RegularPages "Section" "posts" }}
   {{ $posts = where $posts "Params.status" "published" }}
+  {{ $posts = where $posts "Draft" false }}
   {{ $posts = $posts.ByDate.Reverse }}
+  {{ $tagScratch := newScratch }}
+  {{ $tagScratch.Set "items" (slice) }}
+  {{ range $posts }}
+    {{ range .Params.tags }}
+      {{ $current := $tagScratch.Get "items" }}
+      {{ if not (in $current .) }}
+        {{ $tagScratch.Set "items" ($current | append .) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $tags := sort ($tagScratch.Get "items") }}
   <section class="page-heading">
     <p class="eyebrow">Posts</p>
     <h1>{{ .Title }}</h1>
@@ -24,8 +36,8 @@
       <span class="filter-label">按标签筛选</span>
       <div class="filter-chip-row" data-filter-group="tag">
         <button class="filter-chip is-active" type="button" data-filter-value="">全部</button>
-        {{ range site.Taxonomies.tags.Alphabetical }}
-          <button class="filter-chip" type="button" data-filter-value="{{ .Page.Title }}">{{ .Page.Title }}</button>
+        {{ range $tags }}
+          <button class="filter-chip" type="button" data-filter-value="{{ . }}">{{ . }}</button>
         {{ end }}
       </div>
     </div>

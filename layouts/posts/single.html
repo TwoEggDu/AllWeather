@@ -1,77 +1,97 @@
 {{ define "main" }}
-  {{ $levelLabels := dict "beginner" "入门" "intermediate" "进阶" }}
-  {{ $statusLabels := dict "draft" "草稿" "published" "已发布" }}
-  {{ $siblings := where .CurrentSection.RegularPages "Params.status" "published" }}
-  {{ $siblings = $siblings.ByDate.Reverse }}
-  {{ $navScratch := newScratch }}
-  {{ $navScratch.Set "currentIndex" -1 }}
-  {{ range $index, $item := $siblings }}
-    {{ if eq $item.RelPermalink $.RelPermalink }}
-      {{ $navScratch.Set "currentIndex" $index }}
+  {{ $isPublished := and (eq .Params.status "published") (not .Draft) }}
+  {{ if not $isPublished }}
+    {{ if hugo.IsServer }}
+      <article class="article article-page">
+        <header class="article-header">
+          <p class="eyebrow">Draft Preview</p>
+          <h1>{{ .Title }}</h1>
+          <p class="article-summary">这篇文章仍处于草稿状态，只在本地预览中显示，不会进入公开列表、RSS 或 sitemap。</p>
+        </header>
+        <div class="prose article-prose">
+          {{ .Content }}
+          {{ partial "disclaimer.html" . }}
+        </div>
+      </article>
+    {{ else }}
+      {{ errorf "Post %q is not public. Set status=published and draft=false, or keep it out of the production build." .File.Path }}
     {{ end }}
-  {{ end }}
-  {{ $currentIndex := $navScratch.Get "currentIndex" }}
-  {{ if gt $currentIndex 0 }}
-    {{ $navScratch.Set "newer" (index $siblings (sub $currentIndex 1)) }}
-  {{ end }}
-  {{ if lt (add $currentIndex 1) (len $siblings) }}
-    {{ $navScratch.Set "older" (index $siblings (add $currentIndex 1)) }}
-  {{ end }}
-
-  <article class="article article-post">
-    <header class="article-header">
-      <div class="meta-row">
-        <a class="meta-badge" href="{{ "/posts/" | relURL }}?category={{ .Params.category | urlquery }}">{{ .Params.category }}</a>
-        <span>{{ .Date.Format "2006-01-02" }}</span>
-        <span>{{ .ReadingTime }} 分钟阅读</span>
-        {{ with .Params.level }}
-          <span>{{ index $levelLabels . | default . }}</span>
-        {{ end }}
-        {{ with .Params.status }}
-          <span>{{ index $statusLabels . | default . }}</span>
-        {{ end }}
-      </div>
-      <h1>{{ .Title }}</h1>
-      {{ with .Params.summary }}
-        <p class="article-summary">{{ . }}</p>
+  {{ else }}
+    {{ $levelLabels := dict "beginner" "入门" "intermediate" "进阶" }}
+    {{ $statusLabels := dict "draft" "草稿" "published" "已发布" }}
+    {{ $siblings := where .CurrentSection.RegularPages "Params.status" "published" }}
+    {{ $siblings = where $siblings "Draft" false }}
+    {{ $siblings = $siblings.ByDate.Reverse }}
+    {{ $navScratch := newScratch }}
+    {{ $navScratch.Set "currentIndex" -1 }}
+    {{ range $index, $item := $siblings }}
+      {{ if eq $item.RelPermalink $.RelPermalink }}
+        {{ $navScratch.Set "currentIndex" $index }}
       {{ end }}
-      {{ with .Params.tags }}
-        <div class="tag-row">
-          {{ range . }}
-            <a class="tag" href="{{ "/posts/" | relURL }}?tag={{ . | urlquery }}">{{ . }}</a>
+    {{ end }}
+    {{ $currentIndex := $navScratch.Get "currentIndex" }}
+    {{ if gt $currentIndex 0 }}
+      {{ $navScratch.Set "newer" (index $siblings (sub $currentIndex 1)) }}
+    {{ end }}
+    {{ if lt (add $currentIndex 1) (len $siblings) }}
+      {{ $navScratch.Set "older" (index $siblings (add $currentIndex 1)) }}
+    {{ end }}
+
+    <article class="article article-post">
+      <header class="article-header">
+        <div class="meta-row">
+          <a class="meta-badge" href="{{ "/posts/" | relURL }}?category={{ .Params.category | urlquery }}">{{ .Params.category }}</a>
+          <span>{{ .Date.Format "2006-01-02" }}</span>
+          <span>{{ .ReadingTime }} 分钟阅读</span>
+          {{ with .Params.level }}
+            <span>{{ index $levelLabels . | default . }}</span>
+          {{ end }}
+          {{ with .Params.status }}
+            <span>{{ index $statusLabels . | default . }}</span>
           {{ end }}
         </div>
-      {{ end }}
-    </header>
-
-    <div class="article-shell">
-      {{ if gt (len .TableOfContents) 0 }}
-        <aside class="article-toc">
-          <div class="toc-card">
-            <p class="eyebrow">目录</p>
-            {{ .TableOfContents }}
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.summary }}
+          <p class="article-summary">{{ . }}</p>
+        {{ end }}
+        {{ with .Params.tags }}
+          <div class="tag-row">
+            {{ range . }}
+              <a class="tag" href="{{ "/posts/" | relURL }}?tag={{ . | urlquery }}">{{ . }}</a>
+            {{ end }}
           </div>
-        </aside>
-      {{ end }}
-      <div class="prose article-prose">
-        {{ .Content }}
-        {{ partial "disclaimer.html" . }}
-      </div>
-    </div>
+        {{ end }}
+      </header>
 
-    <footer class="article-footer-nav">
-      {{ with $navScratch.Get "newer" }}
-        <a class="article-nav-card" href="{{ .RelPermalink }}">
-          <span class="eyebrow">较新文章</span>
-          <strong>{{ .Title }}</strong>
-        </a>
-      {{ end }}
-      {{ with $navScratch.Get "older" }}
-        <a class="article-nav-card" href="{{ .RelPermalink }}">
-          <span class="eyebrow">较早文章</span>
-          <strong>{{ .Title }}</strong>
-        </a>
-      {{ end }}
-    </footer>
-  </article>
+      <div class="article-shell">
+        {{ if gt (len .TableOfContents) 0 }}
+          <aside class="article-toc">
+            <div class="toc-card">
+              <p class="eyebrow">目录</p>
+              {{ .TableOfContents }}
+            </div>
+          </aside>
+        {{ end }}
+        <div class="prose article-prose">
+          {{ .Content }}
+          {{ partial "disclaimer.html" . }}
+        </div>
+      </div>
+
+      <footer class="article-footer-nav">
+        {{ with $navScratch.Get "newer" }}
+          <a class="article-nav-card" href="{{ .RelPermalink }}">
+            <span class="eyebrow">较新文章</span>
+            <strong>{{ .Title }}</strong>
+          </a>
+        {{ end }}
+        {{ with $navScratch.Get "older" }}
+          <a class="article-nav-card" href="{{ .RelPermalink }}">
+            <span class="eyebrow">较早文章</span>
+            <strong>{{ .Title }}</strong>
+          </a>
+        {{ end }}
+      </footer>
+    </article>
+  {{ end }}
 {{ end }}

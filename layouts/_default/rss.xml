@@ -1,0 +1,30 @@
+{{- $pages := slice -}}
+{{- if .IsHome -}}
+  {{- $pages = where site.RegularPages "Section" "posts" -}}
+  {{- $pages = where $pages "Params.status" "published" -}}
+{{- else if eq .Section "posts" -}}
+  {{- $pages = where .RegularPages "Params.status" "published" -}}
+{{- else -}}
+  {{- $pages = .RegularPages -}}
+{{- end -}}
+{{- $pages = where $pages "Draft" false -}}
+{{- $pages = $pages.ByDate.Reverse -}}
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
+    <link>{{ .Permalink }}</link>
+    <description>{{ with .Params.summary }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}</description>
+    {{ with .OutputFormats.Get "RSS" }}<atom:link href="{{ .Permalink }}" rel="self" type="application/rss+xml" />{{ end }}
+    {{ with site.LanguageCode }}<language>{{ . }}</language>{{ end }}
+    {{ range first 25 $pages }}
+      <item>
+        <title>{{ .Title }}</title>
+        <link>{{ .Permalink }}</link>
+        <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
+        <guid>{{ .Permalink }}</guid>
+        <description><![CDATA[{{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary }}{{ end }}]]></description>
+      </item>
+    {{ end }}
+  </channel>
+</rss>

@@ -224,9 +224,37 @@ hugo new content posts/your-slug.md
 
 如果暂时没有真实数据或图表，请明确标注：
 
-- `[待补数据]`
-- `[图表占位]`
-- `[待补参考资料]`
+- 草稿阶段可以保留原始占位符：
+  - `[待补数据]`
+  - `[图表占位]`
+  - `[待补参考资料]`
+- 已发布文章不得保留这些原始占位符
+- 缺数据时，应改写成不依赖具体数值也能成立的正文，或降级回草稿
+- 缺图时，应改写成没有图也成立的说明，或写成明确的“后续可补图”提示
+- 缺参考资料时，应写成“后续可补官方来源类别”，不要伪造具体引用
+
+---
+
+## 发布前检查
+
+每次准备把文章从草稿改成已发布前，至少做两步：
+
+1. 运行内容校验脚本：
+
+```powershell
+node scripts/validate-content.mjs
+```
+
+2. 运行 Hugo 构建：
+
+```powershell
+& 'C:\Users\IGG\AppData\Local\Microsoft\WinGet\Packages\Hugo.Hugo.Extended_Microsoft.Winget.Source_8wekyb3d8bbwe\hugo.exe' --gc --minify
+```
+
+详细编辑规则见：
+
+- `docs/editorial-workflow.md`
+- `docs/content-audit.md`
 
 ---
 

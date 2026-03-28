@@ -1,6 +1,7 @@
 {{ define "main" }}
   {{ $posts := where site.RegularPages "Section" "posts" }}
   {{ $posts = where $posts "Params.status" "published" }}
+  {{ $posts = where $posts "Draft" false }}
   {{ $posts = $posts.ByDate.Reverse }}
   <section class="page-heading">
     <p class="eyebrow">Topics</p>
