@@ -1,0 +1,35 @@
+- name: 宏观基础
+  id: macro-basics
+  description: 从增长、通胀、流动性、利率这些最底层变量出发，搭建宏观分析的最小框架。
+  focus:
+    - 关键变量的定义
+    - 宏观框架的搭建
+    - 从术语到因果链条
+- name: 市场机制
+  id: market-mechanics
+  description: 理解资产价格为何会动，以及债券、汇率、股票、信用之间的传导关系。
+  focus:
+    - 价格与收益率
+    - 曲线与贴现
+    - 政策如何进入市场
+- name: 数据解读
+  id: data-interpretation
+  description: 不只看数据公布值，更看口径、方向、预期差与资产表达。
+  focus:
+    - 宏观数据的阅读顺序
+    - 数据与预期差
+    - 指标领先与滞后
+- name: 交易表达
+  id: trade-expression
+  description: 同一个宏观观点可以用不同资产表达，核心是选择更匹配的工具、期限和风险预算。
+  focus:
+    - 观点到仓位
+    - 资产表达差异
+    - 风险预算与对冲
+- name: 复盘纠错
+  id: review-postmortem
+  description: 通过记录判断、验证条件和错误来源，把研究变成一套可以迭代的工作流。
+  focus:
+    - 决策留痕
+    - 错误归因
+    - 复盘与修订

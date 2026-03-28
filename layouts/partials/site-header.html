@@ -1,0 +1,27 @@
+{{ $navItems := slice
+  (dict "url" "/" "label" "首页")
+  (dict "url" "/posts/" "label" "文章")
+  (dict "url" "/topics/" "label" "栏目")
+  (dict "url" "/glossary/" "label" "词汇表")
+  (dict "url" "/about/" "label" "关于")
+}}
+<header class="site-header">
+  <a class="brand" href="{{ "/" | relURL }}">
+    <span class="brand-mark">AW</span>
+    <span class="brand-copy">
+      <strong>{{ site.Title }}</strong>
+      <span>{{ site.Params.subtitle }}</span>
+    </span>
+  </a>
+  <nav class="site-nav" aria-label="主导航">
+    {{ range $navItems }}
+      {{ $isActive := false }}
+      {{ if eq .url "/" }}
+        {{ $isActive = $.IsHome }}
+      {{ else if hasPrefix $.RelPermalink .url }}
+        {{ $isActive = true }}
+      {{ end }}
+      <a class="{{ if $isActive }}is-active{{ end }}" href="{{ .url | relURL }}">{{ .label }}</a>
+    {{ end }}
+  </nav>
+</header>

@@ -1,15 +1,48 @@
 baseURL = "https://example.org/"
 languageCode = "zh-cn"
-title = "All Weather"
+title = "宏观全天候研究日志"
 defaultContentLanguage = "zh-cn"
 hasCJKLanguage = true
 enableRobotsTXT = true
+summaryLength = 120
 
 [pagination]
-pagerSize = 10
+pagerSize = 12
+
+[permalinks]
+posts = "/posts/:slug/"
+glossary = "/glossary/:slug/"
+
+[taxonomies]
+tag = "tags"
+
+[outputs]
+home = ["HTML", "RSS"]
+section = ["HTML", "RSS"]
+page = ["HTML"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
+
+[sitemap]
+changefreq = "weekly"
+priority = 0.6
+
+[services]
+  [services.rss]
+    limit = 25
 
 [params]
-description = "围绕宏观、全天候组合与风险管理的研究型博客。"
-tagline = "把宏观叙事写成规则，把规则落实为仓位。"
-subtitle = "研究、组合、风控、复盘"
-repoNote = "更完整的研究底稿仍保留在仓库原有的中文文档目录里。"
+description = "一个面向中文读者的全球宏观、宏观对冲与跨资产研究博客，记录从零开始建立研究框架、数据意识与复盘能力的过程。"
+tagline = "理解经济，观察市场，复盘错误。"
+subtitle = "全球宏观 / 宏观对冲 / 跨资产研究"
+repoNote = "更细的研究底稿、模板与实验记录仍保留在仓库原有的中文目录中。"
+disclaimer = "本文仅用于学习与研究，不构成任何投资建议。"
+author = "NHT"
+mainSections = ["posts"]

@@ -1,0 +1,45 @@
+{{ define "main" }}
+  {{ $posts := where site.RegularPages "Section" "posts" }}
+  {{ $posts = where $posts "Params.status" "published" }}
+  {{ $posts = $posts.ByDate.Reverse }}
+  <section class="page-heading">
+    <p class="eyebrow">Posts</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}
+      <div class="lede prose">{{ . }}</div>
+    {{ end }}
+  </section>
+
+  <section class="panel filters-panel" id="posts-filters">
+    <div class="filter-block">
+      <span class="filter-label">按栏目筛选</span>
+      <div class="filter-chip-row" data-filter-group="category">
+        <button class="filter-chip is-active" type="button" data-filter-value="">全部</button>
+        {{ range site.Data.topics }}
+          <button class="filter-chip" type="button" data-filter-value="{{ .name }}">{{ .name }}</button>
+        {{ end }}
+      </div>
+    </div>
+    <div class="filter-block">
+      <span class="filter-label">按标签筛选</span>
+      <div class="filter-chip-row" data-filter-group="tag">
+        <button class="filter-chip is-active" type="button" data-filter-value="">全部</button>
+        {{ range site.Taxonomies.tags.Alphabetical }}
+          <button class="filter-chip" type="button" data-filter-value="{{ .Page.Title }}">{{ .Page.Title }}</button>
+        {{ end }}
+      </div>
+    </div>
+    <div class="filter-status-row">
+      <p id="posts-filter-status">当前显示全部 {{ len $posts }} 篇文章。</p>
+      <button class="text-button" id="posts-filter-reset" type="button">清除筛选</button>
+    </div>
+  </section>
+
+  <section class="card-grid" id="posts-grid">
+    {{ range $posts }}
+      {{ partial "post-card.html" (dict "post" .) }}
+    {{ end }}
+  </section>
+
+  <script src="{{ "js/posts-filter.js" | relURL }}" defer></script>
+{{ end }}

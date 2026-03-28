@@ -1,0 +1,28 @@
+{{ define "main" }}
+  <section class="page-heading">
+    <p class="eyebrow">Glossary</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}
+      <div class="lede prose">{{ . }}</div>
+    {{ end }}
+  </section>
+
+  <section class="panel glossary-panel">
+    <div class="filter-status-row">
+      <label class="search-label" for="glossary-search">按术语筛选</label>
+      <input class="search-input" id="glossary-search" type="search" placeholder="例如：CPI、收益率曲线、久期">
+    </div>
+  </section>
+
+  <section class="glossary-grid" id="glossary-grid">
+    {{ range .Pages.ByTitle }}
+      <article class="glossary-card" data-term="{{ .Title }}" data-summary="{{ .Summary | plainify }}">
+        <p class="eyebrow">术语</p>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <p>{{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 140 }}{{ end }}</p>
+      </article>
+    {{ end }}
+  </section>
+
+  <script src="{{ "js/glossary-search.js" | relURL }}" defer></script>
+{{ end }}

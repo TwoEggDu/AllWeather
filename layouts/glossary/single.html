@@ -1,13 +1,7 @@
 {{ define "main" }}
-  <article class="article article-page">
+  <article class="article article-page glossary-single">
     <header class="article-header">
-      <p class="eyebrow">
-        {{ if gt .Date.Unix 0 }}
-          {{ .Date.Format "2006-01-02" }}
-        {{ else }}
-          页面
-        {{ end }}
-      </p>
+      <p class="eyebrow">Glossary Entry</p>
       <h1>{{ .Title }}</h1>
       {{ with .Params.summary }}
         <p class="article-summary">{{ . }}</p>

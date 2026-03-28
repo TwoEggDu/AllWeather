@@ -1,0 +1,19 @@
+{{ define "main" }}
+  {{ $posts := where site.RegularPages "Section" "posts" }}
+  {{ $posts = where $posts "Params.status" "published" }}
+  {{ $posts = $posts.ByDate.Reverse }}
+  <section class="page-heading">
+    <p class="eyebrow">Topics</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Content }}
+      <div class="lede prose">{{ . }}</div>
+    {{ end }}
+  </section>
+
+  <section class="topic-grid">
+    {{ range site.Data.topics }}
+      {{ $topicPosts := where $posts "Params.category" .name }}
+      {{ partial "topic-card.html" (dict "topic" . "count" (len $topicPosts) "posts" $topicPosts) }}
+    {{ end }}
+  </section>
+{{ end }}
