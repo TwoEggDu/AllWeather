@@ -50,6 +50,8 @@
   首页，包含 hero、最新文章、五个栏目入口、方法论说明和免责声明入口
 - `/about`
   说明为什么写这个 blog、学习目标和写作原则
+- `/macro-index`
+  宏观研究索引页，按“变量 -> 定价 -> 数据 -> 资产表达 -> 复盘”的顺序组织现有文章，适合作为首次进入站点的阅读入口
 - `/posts`
   全部文章列表，支持按栏目和标签筛选
 - `/posts/[slug]`
@@ -81,6 +83,10 @@ archetypes/
 templates/
   research-post-template.mdx
 ```
+
+其中新增的宏观阅读导航页位于：
+
+- `content/pages/macro-index.md`
 
 ### 文章 front matter 约定
 
