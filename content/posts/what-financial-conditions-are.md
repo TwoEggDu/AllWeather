@@ -96,3 +96,10 @@ draft: false
 4. 风险资产是否把环境重新放松回去了
 
 如果后续补资料入口，优先看 Federal Reserve、FRED、纽约联储相关金融条件资料以及主要信用利差序列。
+
+## 延伸阅读
+
+- [信用利差在提示什么](/posts/what-credit-spreads-signal/)
+- [QT 到底在抽什么流动性，它和加息有什么区别](/posts/qt-vs-rate-hikes/)
+- [信用利差](/glossary/credit-spread/)
+- [金融条件](/glossary/financial-conditions/)

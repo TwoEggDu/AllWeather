@@ -1,0 +1,17 @@
+{{ $related := where .CurrentSection.RegularPages "Params.category" .Params.category }}
+{{ $related = where $related "Params.status" "published" }}
+{{ $related = where $related "Draft" false }}
+{{ $related = where $related "RelPermalink" "ne" .RelPermalink }}
+{{ $related = $related.ByDate.Reverse }}
+{{ if gt (len $related) 0 }}
+<section class="article-related">
+  <p class="eyebrow">同栏目文章</p>
+  <div class="article-footer-nav">
+    {{ range first 4 $related }}
+      <a class="article-nav-card" href="{{ .RelPermalink }}">
+        <strong>{{ .Title }}</strong>
+      </a>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

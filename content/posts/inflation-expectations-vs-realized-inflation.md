@@ -97,3 +97,10 @@ headline inflation 和 core inflation 讲的不是一回事，短期波动也可
 2. 为什么“预期差”比“数字高低”更容易引发大波动
 3. 复盘一个“实际通胀没变多少，但市场已经大幅转向”的阶段
 4. 后续可补官方来源类别：FRED、Federal Reserve、BLS、BEA、纽约联储相关调查资料
+
+## 延伸阅读
+
+- [TIPS 和盈亏平衡通胀怎么看](/posts/how-to-read-tips-and-breakevens/)
+- [实际利率到底是什么，为什么它同时影响黄金、债券和美元](/posts/real-rates-gold-bonds-dollar/)
+- [通胀预期](/glossary/inflation-expectation/)
+- [CPI](/glossary/cpi/)

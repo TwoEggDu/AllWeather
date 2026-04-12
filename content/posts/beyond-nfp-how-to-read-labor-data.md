@@ -102,3 +102,8 @@ draft: false
 3. 最后看平均时薪是否仍然支持“劳动力市场偏紧”的判断
 
 如果后续补资料入口，优先看 BLS、Federal Reserve 和 FRED。
+
+## 延伸阅读
+
+- [非农数据怎么看](/posts/how-to-read-nonfarm-payrolls/)
+- [非农](/glossary/nonfarm-payrolls/)

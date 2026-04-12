@@ -103,3 +103,10 @@ draft: false
 4. 市场原来是否已经高度一致地预期这件事
 
 如果后续补资料入口，优先看 BLS、Federal Reserve、FRED、BEA 以及主要信用和利率市场序列。
+
+## 延伸阅读
+
+- [核心 CPI 和 headline CPI 到底有什么区别](/posts/core-vs-headline-cpi/)
+- [同一个宏观观点，为什么可以用不同资产来表达](/posts/one-view-many-trade-expressions/)
+- [信用利差](/glossary/credit-spread/)
+- [CPI](/glossary/cpi/)

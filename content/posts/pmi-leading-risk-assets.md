@@ -72,4 +72,11 @@ PMI 不是万能领先指标：
 1. 制造业 PMI 和服务业 PMI 有何差别
 2. PMI 新订单分项为什么更值得看
 3. PMI 与库存周期的关系
-如果要把这篇文章继续写实，后续可补一张“PMI、新订单分项与典型风险资产方向变化”的示意图。图能够帮助理解节奏，但不影响本文关于 PMI 为什么常被当作先行线索的核心结论。
+如果要把这篇文章继续写实，后续可补一张”PMI、新订单分项与典型风险资产方向变化”的示意图。图能够帮助理解节奏，但不影响本文关于 PMI 为什么常被当作先行线索的核心结论。
+
+## 延伸阅读
+
+- [增长、通胀、流动性：投资最基础的三条线](/posts/growth-inflation-liquidity-basics/)
+- [同一个判断在不同周期阶段应该用不同工具](/posts/same-view-different-instruments-across-cycle/)
+- [PMI](/glossary/pmi/)
+- [风险偏好](/glossary/risk-appetite/)

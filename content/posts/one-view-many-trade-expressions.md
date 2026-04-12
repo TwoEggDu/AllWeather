@@ -79,3 +79,10 @@ draft: false
 2. 什么时候应该用组合表达，而不是单一工具
 3. 什么时候宁可不表达，先观察
 4. 后续可补官方来源类别：FRED、Federal Reserve、BEA、BLS、CME FedWatch，用来给不同资产的敏感度复盘接上数据入口
+
+## 延伸阅读
+
+- [同一个判断，什么时候不该交易](/posts/when-not-to-trade-a-macro-view/)
+- [配对交易如何隔离一个宏观因子](/posts/pairs-trades-to-isolate-macro-factors/)
+- [同一个判断在不同周期阶段应该用不同工具](/posts/same-view-different-instruments-across-cycle/)
+- [风险偏好](/glossary/risk-appetite/)

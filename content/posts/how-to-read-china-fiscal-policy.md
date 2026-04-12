@@ -100,3 +100,10 @@ draft: false
 3. 最后看是否传导到基建、工业链、地方财政压力和市场风险偏好
 
 如果后续补资料入口，优先看财政部、国家统计局、国家发改委和地方预算公开资料。
+
+## 延伸阅读
+
+- [地方政府与城投在中国宏观里意味着什么](/posts/why-lgfvs-matter-in-china-macro/)
+- [为什么房地产在中国宏观里如此重要](/posts/why-real-estate-matters-in-china/)
+- [社融](/glossary/tsf/)
+- [GDP](/glossary/gdp/)

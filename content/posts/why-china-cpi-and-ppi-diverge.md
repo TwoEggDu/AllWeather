@@ -105,3 +105,10 @@ CPI 的食品、服务和核心项会有不同节奏，单看 headline 容易失
 3. 最后结合地产、出口、消费和工业链判断这种背离意味着什么
 
 如果后续补资料入口，优先看国家统计局、海关总署、人民银行和主要大宗商品公开数据。
+
+## 延伸阅读
+
+- [核心 CPI 和 headline CPI 到底有什么区别](/posts/core-vs-headline-cpi/)
+- [为什么房地产在中国宏观里如此重要](/posts/why-real-estate-matters-in-china/)
+- [CPI](/glossary/cpi/)
+- [PPI](/glossary/ppi/)

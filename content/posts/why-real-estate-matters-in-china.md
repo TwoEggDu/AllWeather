@@ -91,3 +91,9 @@ draft: false
 4. 银行和信用市场对地产链的风险定价是否变化
 
 如果后续补资料入口，优先看国家统计局、人民银行、国家金融监督管理总局、财政部和中指等公开研究资料。
+
+## 延伸阅读
+
+- [社融和信贷脉冲怎么看](/posts/how-to-read-tsf-and-credit-impulse-in-china/)
+- [地方政府与城投在中国宏观里意味着什么](/posts/why-lgfvs-matter-in-china-macro/)
+- [中国的财政发力怎么看](/posts/how-to-read-china-fiscal-policy/)

@@ -69,3 +69,10 @@ draft: false
 - 金融条件指数在这类分析里的位置
 - 如果继续做实证，可后续补政策会议前后短端收益率、美元、信用利差和股指的联动观察
 - 后续可补官方来源类别：Federal Reserve、FRED、CME FedWatch、纽约联储金融条件相关资料
+
+## 延伸阅读
+
+- [FOMC 会议到底要看什么](/posts/how-to-read-fomc/)
+- [金融条件到底是什么](/posts/what-financial-conditions-are/)
+- [利率](/glossary/interest-rate/)
+- [FOMC](/glossary/fomc/)

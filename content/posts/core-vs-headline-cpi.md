@@ -95,3 +95,10 @@ draft: false
 3. 建一个固定阅读顺序：先看 headline，再看 core，再看最能体现黏性的关键分项
 
 如果后续需要补数据入口，优先看 BLS、Federal Reserve 和 FRED 这类官方来源。
+
+## 延伸阅读
+
+- [服务通胀为什么比商品通胀更难降](/posts/why-service-inflation-is-sticky/)
+- [住房通胀为什么这么关键](/posts/why-housing-inflation-and-oer-matter/)
+- [为什么"通胀回落"不一定利好所有风险资产](/posts/why-disinflation-is-not-always-risk-on/)
+- [CPI](/glossary/cpi/)

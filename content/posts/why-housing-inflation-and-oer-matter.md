@@ -92,3 +92,9 @@ draft: false
 3. 除了住房之外，其他核心服务是否也在同步回落
 
 如果后续补资料入口，优先看 BLS、Federal Reserve、FRED 和住房租赁市场相关官方或准官方资料。
+
+## 延伸阅读
+
+- [核心 CPI 和 headline CPI 到底有什么区别](/posts/core-vs-headline-cpi/)
+- [服务通胀为什么比商品通胀更难降](/posts/why-service-inflation-is-sticky/)
+- [CPI](/glossary/cpi/)

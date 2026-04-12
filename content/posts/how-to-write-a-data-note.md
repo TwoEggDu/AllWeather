@@ -120,3 +120,10 @@ draft: false
 3. 一个月后回看，检查自己最容易漏的是分项、机制，还是资产映射
 
 如果以后补资料入口，优先看 BLS、Federal Reserve、FRED 以及 CME FedWatch 这类官方或准官方来源。
+
+## 延伸阅读
+
+- [非农数据怎么看](/posts/how-to-read-nonfarm-payrolls/)
+- [CPI 变化如何影响股市、债市和美元](/posts/cpi-and-assets/)
+- [CPI](/glossary/cpi/)
+- [非农](/glossary/nonfarm-payrolls/)

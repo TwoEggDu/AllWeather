@@ -111,3 +111,8 @@ draft: false
 3. 三个月做一次“复盘的复盘”，检查自己最常错在哪个环节
 
 如果后续需要补数据入口，优先围绕 FRED、BLS、BEA、Federal Reserve、ISM 和 EIA 这些官方来源建立固定观察清单。
+
+## 延伸阅读
+
+- [第一次完整复盘：我如何用一篇文章记录一次判断的全过程](/posts/first-postmortem-for-a-macro-view/)
+- [如何把一个月的关键数据整理成观察面板](/posts/how-to-build-a-macro-observation-board/)

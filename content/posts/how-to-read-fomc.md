@@ -114,3 +114,10 @@ draft: false
 6. 资产第一反应和收盘反应是否一致
 
 如果后续补资料入口，优先看 Federal Reserve、FRED 和 CME FedWatch。
+
+## 延伸阅读
+
+- [美联储加息/降息，真正影响市场的是什么](/posts/what-fed-hikes-and-cuts-really-change/)
+- [金融条件到底是什么](/posts/what-financial-conditions-are/)
+- [FOMC](/glossary/fomc/)
+- [利率](/glossary/interest-rate/)

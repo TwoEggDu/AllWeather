@@ -106,3 +106,10 @@ draft: false
 3. 股市是在交易盈利还是在交易风险偏好
 
 如果后续补资料入口，优先看 FRED、Federal Reserve 和主要投资级 / 高收益信用利差序列。
+
+## 延伸阅读
+
+- [金融条件到底是什么](/posts/what-financial-conditions-are/)
+- [配对交易如何隔离一个宏观因子](/posts/pairs-trades-to-isolate-macro-factors/)
+- [信用利差](/glossary/credit-spread/)
+- [风险偏好](/glossary/risk-appetite/)

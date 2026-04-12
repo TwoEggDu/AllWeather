@@ -110,3 +110,10 @@ draft: false
 2. 补几个历史阶段，观察黄金、10 年期美债和美元指数的联动
 3. 记录一次具体事件复盘：当实际利率变化时，三类资产谁先动、谁后动、谁最敏感
 4. 后续可补官方来源类别：FRED、Federal Reserve、U.S. Treasury、CME FedWatch
+
+## 延伸阅读
+
+- [TIPS 和盈亏平衡通胀怎么看](/posts/how-to-read-tips-and-breakevens/)
+- [美元为什么会涨](/posts/why-the-dollar-rises/)
+- [实际利率](/glossary/real-rate/)
+- [通胀预期](/glossary/inflation-expectation/)

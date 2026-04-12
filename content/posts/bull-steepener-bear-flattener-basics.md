@@ -119,3 +119,10 @@ draft: false
 3. 最后判断主导力量更像前端政策、长端期限溢价，还是增长 / 通胀预期变化
 
 如果后续补资料入口，优先看 FRED、U.S. Treasury 和 Federal Reserve。
+
+## 延伸阅读
+
+- [收益率曲线为什么重要，倒挂到底在提示什么](/posts/why-yield-curve-matters/)
+- [期限溢价到底是什么](/posts/what-term-premium-is/)
+- [用曲线交易表达宏观观点：什么时候做陡、什么时候做平](/posts/curve-trades-to-express-macro-views/)
+- [收益率曲线](/glossary/yield-curve/)

@@ -67,4 +67,11 @@ draft: false
 
 - headline CPI 与核心 CPI 的传导差异
 - 中国、美国、欧洲对油价上行的敏感度差异
-- 后续可补图：油价冲击从 headline inflation、行业成本到汇率与风险资产的传导示意图；没有这张图时，先抓住“为什么涨”和“通过哪条路径传导”已经足够
+- 后续可补图：油价冲击从 headline inflation、行业成本到汇率与风险资产的传导示意图；没有这张图时，先抓住”为什么涨”和”通过哪条路径传导”已经足够
+
+## 延伸阅读
+
+- [CPI 变化如何影响股市、债市和美元](/posts/cpi-and-assets/)
+- [同一个宏观观点，为什么可以用不同资产来表达](/posts/one-view-many-trade-expressions/)
+- [大宗商品](/glossary/commodities/)
+- [CPI](/glossary/cpi/)

@@ -93,3 +93,10 @@ draft: false
 3. 商品回落之后，服务是否仍然拖住核心通胀
 
 如果后续补资料入口，优先看 BLS、BEA、Federal Reserve 和 FRED。
+
+## 延伸阅读
+
+- [核心 CPI 和 headline CPI 到底有什么区别](/posts/core-vs-headline-cpi/)
+- [住房通胀为什么这么关键](/posts/why-housing-inflation-and-oer-matter/)
+- [CPI](/glossary/cpi/)
+- [PPI](/glossary/ppi/)

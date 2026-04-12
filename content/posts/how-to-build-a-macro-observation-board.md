@@ -124,3 +124,9 @@ draft: false
    - 自己下个月最该盯哪一个验证点
 
 如果后续补资料入口，优先围绕 FRED、BLS、BEA、Federal Reserve、ISM、EIA 建一个固定清单。
+
+## 延伸阅读
+
+- [我如何做一次月度宏观复盘](/posts/monthly-macro-review-workflow/)
+- [增长、通胀、流动性：投资最基础的三条线](/posts/growth-inflation-liquidity-basics/)
+- [PMI](/glossary/pmi/)

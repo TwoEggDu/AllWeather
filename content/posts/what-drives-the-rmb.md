@@ -87,3 +87,10 @@ draft: false
 4. 外汇供求和资金流方向有没有变化
 
 如果后续补资料入口，优先看人民银行、外汇局、海关总署、国家统计局和主要利率市场公开数据。
+
+## 延伸阅读
+
+- [美元为什么会涨](/posts/why-the-dollar-rises/)
+- [用汇率交叉盘表达相对增长和政策分化](/posts/currency-crosses-for-relative-macro-views/)
+- [中国的财政发力怎么看](/posts/how-to-read-china-fiscal-policy/)
+- [美元指数](/glossary/dollar-index/)

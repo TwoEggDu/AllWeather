@@ -112,3 +112,10 @@ draft: false
 3. 最后看盈亏平衡通胀是在扩大还是收窄
 
 如果后续补资料入口，优先看 FRED、Federal Reserve、U.S. Treasury。
+
+## 延伸阅读
+
+- [实际利率到底是什么，为什么它同时影响黄金、债券和美元](/posts/real-rates-gold-bonds-dollar/)
+- [通胀预期和实际通胀有什么区别](/posts/inflation-expectations-vs-realized-inflation/)
+- [TIPS](/glossary/tips/)
+- [盈亏平衡通胀率](/glossary/breakeven-inflation/)

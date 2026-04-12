@@ -96,3 +96,10 @@ draft: false
 4. 区域分化是在收敛还是扩大
 
 如果后续补资料入口，优先看财政部、国家统计局、人民银行、交易所和公开信用研究资料。
+
+## 延伸阅读
+
+- [为什么房地产在中国宏观里如此重要](/posts/why-real-estate-matters-in-china/)
+- [社融和信贷脉冲怎么看](/posts/how-to-read-tsf-and-credit-impulse-in-china/)
+- [信用利差](/glossary/credit-spread/)
+- [社融](/glossary/tsf/)

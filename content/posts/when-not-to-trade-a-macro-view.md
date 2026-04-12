@@ -95,3 +95,10 @@ draft: false
 5. 如果错了，我愿意用多大代价承认自己错了
 
 如果这五个问题里有两个以上答不清楚，最合理的动作通常不是勉强表达，而是先把它留在观察清单里。
+
+## 延伸阅读
+
+- [同一个宏观观点，为什么可以用不同资产来表达](/posts/one-view-many-trade-expressions/)
+- [对冲一个宏观头寸和直接做反向有什么区别](/posts/hedging-vs-taking-the-other-side/)
+- [第一次完整复盘：我如何用一篇文章记录一次判断的全过程](/posts/first-postmortem-for-a-macro-view/)
+- [波动率](/glossary/volatility/)

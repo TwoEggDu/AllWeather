@@ -71,3 +71,10 @@ draft: false
 - 流动性应该看央行、银行体系还是市场融资条件
 - 后续可补一张“增长、通胀、流动性到资产映射”的示意图，帮助把三条线转成固定观察顺序
 - 后续可补官方来源类别：BEA、BLS、Federal Reserve、FRED、ISM
+
+## 延伸阅读
+
+- [通胀预期和实际通胀有什么区别](/posts/inflation-expectations-vs-realized-inflation/)
+- [金融条件到底是什么](/posts/what-financial-conditions-are/)
+- [GDP](/glossary/gdp/)
+- [CPI](/glossary/cpi/)

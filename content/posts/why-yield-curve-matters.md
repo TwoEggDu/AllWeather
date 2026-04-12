@@ -97,3 +97,10 @@ draft: false
 2. 曲线走平、陡峭化、牛陡和熊平分别是什么意思
 3. 复盘一次历史倒挂阶段：它先影响了哪些资产，后影响了哪些资产
 4. 后续可补官方来源类别：FRED、Federal Reserve、U.S. Treasury、纽约联储研究资料
+
+## 延伸阅读
+
+- [3M-10Y 和 2Y-10Y 有什么区别](/posts/three-month-ten-year-vs-two-year-ten-year/)
+- [牛陡、熊平、牛平、熊陡分别是什么意思](/posts/bull-steepener-bear-flattener-basics/)
+- [用曲线交易表达宏观观点：什么时候做陡、什么时候做平](/posts/curve-trades-to-express-macro-views/)
+- [收益率曲线](/glossary/yield-curve/)

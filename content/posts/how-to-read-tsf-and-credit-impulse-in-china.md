@@ -89,3 +89,9 @@ draft: false
 3. 最后看它有没有传导到地产、工业品、制造业投资和风险偏好
 
 如果后续补资料入口，优先看人民银行、国家统计局、财政部和交易所公开数据。
+
+## 延伸阅读
+
+- [为什么房地产在中国宏观里如此重要](/posts/why-real-estate-matters-in-china/)
+- [地方政府与城投在中国宏观里意味着什么](/posts/why-lgfvs-matter-in-china-macro/)
+- [社融](/glossary/tsf/)

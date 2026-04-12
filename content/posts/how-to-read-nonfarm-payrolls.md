@@ -97,3 +97,9 @@ draft: false
 2. 工资增速为什么有时比就业人数更重要
 3. 复盘一次“数据强但市场反应相反”的典型案例
 4. 后续可补官方来源类别：BLS、Federal Reserve、FRED、CME FedWatch
+
+## 延伸阅读
+
+- [就业数据不只看非农](/posts/beyond-nfp-how-to-read-labor-data/)
+- [CPI 变化如何影响股市、债市和美元](/posts/cpi-and-assets/)
+- [非农](/glossary/nonfarm-payrolls/)

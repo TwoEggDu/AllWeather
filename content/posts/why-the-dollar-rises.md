@@ -92,3 +92,10 @@ draft: false
 3. 最后看美国相对其他主要经济体的增长叙事是否更强
 
 如果后续补资料入口，优先看 Federal Reserve、FRED、BIS 和主要美元指数相关官方或准官方序列。
+
+## 延伸阅读
+
+- [实际利率到底是什么，为什么它同时影响黄金、债券和美元](/posts/real-rates-gold-bonds-dollar/)
+- [人民币汇率受什么驱动](/posts/what-drives-the-rmb/)
+- [用汇率交叉盘表达相对增长和政策分化](/posts/currency-crosses-for-relative-macro-views/)
+- [美元指数](/glossary/dollar-index/)

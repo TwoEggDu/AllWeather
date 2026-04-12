@@ -109,3 +109,10 @@ draft: false
 3. 市场是在交易增长、更高通胀，还是更高的长期风险补偿
 
 如果后续补资料入口，优先看 Federal Reserve、FRED、U.S. Treasury 以及纽约联储相关研究。
+
+## 延伸阅读
+
+- [牛陡、熊平、牛平、熊陡分别是什么意思](/posts/bull-steepener-bear-flattener-basics/)
+- [收益率曲线为什么重要，倒挂到底在提示什么](/posts/why-yield-curve-matters/)
+- [期限溢价](/glossary/term-premium/)
+- [国债](/glossary/treasury-bond/)
