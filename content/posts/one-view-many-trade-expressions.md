@@ -85,4 +85,5 @@ draft: false
 - [同一个判断，什么时候不该交易](/posts/when-not-to-trade-a-macro-view/)
 - [配对交易如何隔离一个宏观因子](/posts/pairs-trades-to-isolate-macro-factors/)
 - [同一个判断在不同周期阶段应该用不同工具](/posts/same-view-different-instruments-across-cycle/)
+- [多个头寸之间怎么分配风险预算](/posts/how-to-allocate-risk-budget-across-positions/)
 - [风险偏好](/glossary/risk-appetite/)

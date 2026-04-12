@@ -86,5 +86,6 @@ draft: false
 
 - [同一个判断，什么时候不该交易](/posts/when-not-to-trade-a-macro-view/)
 - [同一个宏观观点，为什么可以用不同资产来表达](/posts/one-view-many-trade-expressions/)
+- [什么时候该止损：区分噪音回撤和判断失效](/posts/when-to-stop-loss-vs-hold-through-noise/)
 - [波动率](/glossary/volatility/)
 - [回撤](/glossary/drawdown/)

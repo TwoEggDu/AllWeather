@@ -77,4 +77,5 @@ draft: false
 - [通胀预期和实际通胀有什么区别](/posts/inflation-expectations-vs-realized-inflation/)
 - [金融条件到底是什么](/posts/what-financial-conditions-are/)
 - [GDP](/glossary/gdp/)
+- [怎么把多个宏观观点组合成一个组合](/posts/how-to-combine-multiple-macro-views-into-a-portfolio/)
 - [CPI](/glossary/cpi/)

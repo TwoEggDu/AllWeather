@@ -76,4 +76,5 @@ draft: false
 - [同一���宏观观点，为什么可以用不同资产来表达](/posts/one-view-many-trade-expressions/)
 - [实际利率到底是什么，为什么它同时影响黄金、债券和美元](/posts/real-rates-gold-bonds-dollar/)
 - [信用利差在提示什么](/posts/what-credit-spreads-signal/)
+- [相关性陷阱：看起来分散的头寸可能暴露在同一个因子上](/posts/correlation-traps-hidden-factor-concentration/)
 - [风险偏好](/glossary/risk-appetite/)

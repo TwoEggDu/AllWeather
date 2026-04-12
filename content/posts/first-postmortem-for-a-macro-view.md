@@ -126,3 +126,4 @@ draft: false
 - [同一个判断，什么时候不该交易](/posts/when-not-to-trade-a-macro-view/)
 - [我如何做一次月度宏观复盘](/posts/monthly-macro-review-workflow/)
 - [一篇数据解读应该怎么写](/posts/how-to-write-a-data-note/)
+- [什么时候该止损：区分噪音回撤和判断失效](/posts/when-to-stop-loss-vs-hold-through-noise/)

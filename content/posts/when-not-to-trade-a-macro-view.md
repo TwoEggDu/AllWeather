@@ -101,4 +101,5 @@ draft: false
 - [同一个宏观观点，为什么可以用不同资产来表达](/posts/one-view-many-trade-expressions/)
 - [对冲一个宏观头寸和直接做反向有什么区别](/posts/hedging-vs-taking-the-other-side/)
 - [第一次完整复盘：我如何用一篇文章记录一次判断的全过程](/posts/first-postmortem-for-a-macro-view/)
+- [仓位大小怎么定：置信度、波动率和风险预算的关系](/posts/how-to-size-a-macro-position/)
 - [波动率](/glossary/volatility/)
