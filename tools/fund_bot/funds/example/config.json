@@ -1,0 +1,8 @@
+{
+  "name": "示例宏观对冲基金",
+  "strategy_type": "macro",
+  "redemption_cycle_days": 30,
+  "nav_file": "tools/fund_bot/funds/example/nav.csv",
+  "holdings_dir": "tools/fund_bot/funds/example/holdings",
+  "reports_dir": "tools/fund_bot/funds/example/reports"
+}
