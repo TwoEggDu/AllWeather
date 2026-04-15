@@ -1,6 +1,6 @@
 ---
 title: 3M-10Y 和 2Y-10Y 有什么区别，为什么两种曲线倒挂不能混着看
-slug: 3m-10y-vs-2y-10y-yield-curve
+slug: three-month-ten-year-vs-two-year-ten-year
 date: 2026-03-27T10:30:00+08:00
 summary: 3M-10Y 更贴近“当前政策是否偏紧”，2Y-10Y 更贴近“未来两年政策路径如何重定价”，同样叫倒挂，信息含义并不完全一样。
 category: 市场机制
