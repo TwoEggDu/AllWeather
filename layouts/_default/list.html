@@ -11,7 +11,7 @@
     {{ range .Pages.ByDate.Reverse }}
       <article class="stack-item">
         <p class="eyebrow">{{ .Date.Format "2006-01-02" }}</p>
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         <p>{{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 160 }}{{ end }}</p>
       </article>
     {{ end }}

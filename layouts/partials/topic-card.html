@@ -21,9 +21,9 @@
     <div class="topic-related">
       <p class="topic-related-label">最近文章</p>
       {{ range first 2 . }}
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
       {{ end }}
     </div>
   {{ end }}
-  <a class="text-link" href="{{ "/posts/" | relURL }}?category={{ $topic.name | urlquery }}">查看这个栏目</a>
+  <a class="text-link" href="{{ printf "%s%s" site.BaseURL "posts/" }}?category={{ $topic.name | urlquery }}">查看这个栏目</a>
 </article>

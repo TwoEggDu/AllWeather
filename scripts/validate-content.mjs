@@ -76,9 +76,95 @@ function normalizeScalar(value) {
   return value.replace(/^['"]|['"]$/g, "").trim().toLowerCase();
 }
 
+function normalizePath(value) {
+  return value.replace(/\\/g, "/");
+}
+
+function normalizeUrl(value) {
+  if (typeof value !== "string") {
+    return "";
+  }
+
+  const normalized = value.trim();
+  if (!normalized) {
+    return "";
+  }
+
+  const withLeadingSlash = normalized.startsWith("/") ? normalized : `/${normalized}`;
+  return withLeadingSlash.endsWith("/") ? withLeadingSlash : `${withLeadingSlash}/`;
+}
+
+function stripLinkSuffix(value) {
+  return value.split("#", 1)[0].split("?", 1)[0];
+}
+
+function collectMarkdownLinks(body) {
+  const pattern = /\]\((?!https?:\/\/|mailto:|#)([^)]+)\)/g;
+  const links = [];
+
+  for (const line of body.split(/\r?\n/)) {
+    let match;
+    while ((match = pattern.exec(line)) !== null) {
+      links.push(match[1].trim());
+    }
+    pattern.lastIndex = 0;
+  }
+
+  return links;
+}
+
+function resolveOutputUrl(relativePath, data) {
+  const normalizedPath = normalizePath(relativePath);
+  const normalizedDir = path.posix.dirname(normalizedPath);
+  const fileName = path.posix.basename(normalizedPath);
+
+  if (typeof data.url === "string" && data.url.trim()) {
+    return normalizeUrl(data.url);
+  }
+
+  if (fileName === "_index.md") {
+    if (normalizedDir === ".") {
+      return "/";
+    }
+
+    return normalizeUrl(`/${normalizedDir}/`);
+  }
+
+  const section = normalizedDir === "." ? "" : normalizedDir;
+  const baseName = path.posix.basename(normalizedPath, path.posix.extname(normalizedPath));
+  const slug = typeof data.slug === "string" && data.slug.trim() ? data.slug.trim() : baseName;
+
+  if (!section) {
+    return normalizeUrl(`/${slug}/`);
+  }
+
+  return normalizeUrl(`/${section}/${slug}/`);
+}
+
+async function collectContentFiles(dir) {
+  const files = [];
+  const entries = await readdir(dir, { withFileTypes: true });
+
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
+
+    if (entry.isDirectory()) {
+      files.push(...(await collectContentFiles(fullPath)));
+      continue;
+    }
+
+    if (entry.isFile() && entry.name.endsWith(".md")) {
+      files.push(fullPath);
+    }
+  }
+
+  return files;
+}
+
 async function main() {
   const repoRoot = process.cwd();
   const postsDir = path.join(repoRoot, "content", "posts");
+  const contentDir = path.join(repoRoot, "content");
   const entries = await readdir(postsDir, { withFileTypes: true });
   const postFiles = entries
     .filter((entry) => entry.isFile() && entry.name.endsWith(".md") && entry.name !== "_index.md")
@@ -144,6 +230,59 @@ async function main() {
 
     if (issues.length > 0) {
       allIssues.push({ fileName: relativePath, issues });
+    }
+  }
+
+  const contentFiles = await collectContentFiles(contentDir);
+  const validInternalTargets = new Set();
+
+  for (const fullPath of contentFiles) {
+    const relativeFromRepo = normalizePath(path.relative(repoRoot, fullPath));
+    const relativeFromContent = normalizePath(path.relative(contentDir, fullPath));
+    const source = await readFile(fullPath, "utf8");
+    const { data, issues } = parseFrontmatter(source, relativeFromRepo);
+
+    if (issues.length > 0) {
+      continue;
+    }
+
+    validInternalTargets.add(resolveOutputUrl(relativeFromContent, data));
+
+    if (Array.isArray(data.aliases)) {
+      for (const alias of data.aliases) {
+        const normalizedAlias = normalizeUrl(alias);
+        if (normalizedAlias) {
+          validInternalTargets.add(normalizedAlias);
+        }
+      }
+    }
+  }
+
+  for (const fullPath of contentFiles) {
+    const relativeFromRepo = normalizePath(path.relative(repoRoot, fullPath));
+    const source = await readFile(fullPath, "utf8");
+    const { body, issues } = parseFrontmatter(source, relativeFromRepo);
+
+    if (issues.length > 0) {
+      continue;
+    }
+
+    const linkIssues = [];
+    for (const link of collectMarkdownLinks(body)) {
+      if (!link.startsWith("/")) {
+        continue;
+      }
+
+      const target = normalizeUrl(stripLinkSuffix(link));
+      if (!target || validInternalTargets.has(target)) {
+        continue;
+      }
+
+      linkIssues.push(`内部链接指向不存在的页面：${link}`);
+    }
+
+    if (linkIssues.length > 0) {
+      allIssues.push({ fileName: relativeFromRepo, issues: linkIssues });
     }
   }
 

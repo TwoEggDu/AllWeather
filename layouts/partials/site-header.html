@@ -7,7 +7,7 @@
   (dict "url" "/about/" "label" "关于")
 }}
 <header class="site-header">
-  <a class="brand" href="{{ "/" | relURL }}">
+  <a class="brand" href="{{ site.Home.Permalink }}">
     <span class="brand-mark">AW</span>
     <span class="brand-copy">
       <strong>{{ site.Title }}</strong>
@@ -17,12 +17,16 @@
   <nav class="site-nav" aria-label="主导航">
     {{ range $navItems }}
       {{ $isActive := false }}
+      {{ $href := site.Home.Permalink }}
       {{ if eq .url "/" }}
         {{ $isActive = $.IsHome }}
-      {{ else if hasPrefix $.RelPermalink .url }}
-        {{ $isActive = true }}
+      {{ else }}
+        {{ if hasPrefix $.RelPermalink .url }}
+          {{ $isActive = true }}
+        {{ end }}
+        {{ $href = printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .url) }}
       {{ end }}
-      <a class="{{ if $isActive }}is-active{{ end }}" href="{{ .url | relURL }}">{{ .label }}</a>
+      <a class="{{ if $isActive }}is-active{{ end }}" href="{{ $href }}">{{ .label }}</a>
     {{ end }}
   </nav>
 </header>

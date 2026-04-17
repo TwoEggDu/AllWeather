@@ -18,7 +18,7 @@
     {{ range .Pages.ByTitle }}
       <article class="glossary-card" data-term="{{ .Title }}" data-summary="{{ .Summary | plainify }}">
         <p class="eyebrow">术语</p>
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         <p>{{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 140 }}{{ end }}</p>
       </article>
     {{ end }}

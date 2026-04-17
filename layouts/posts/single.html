@@ -40,7 +40,7 @@
     <article class="article article-post">
       <header class="article-header">
         <div class="meta-row">
-          <a class="meta-badge" href="{{ "/posts/" | relURL }}?category={{ .Params.category | urlquery }}">{{ .Params.category }}</a>
+          <a class="meta-badge" href="{{ printf "%s%s" site.BaseURL "posts/" }}?category={{ .Params.category | urlquery }}">{{ .Params.category }}</a>
           <span>{{ .Date.Format "2006-01-02" }}</span>
           <span>{{ .ReadingTime }} 分钟阅读</span>
           {{ with .Params.level }}
@@ -57,7 +57,7 @@
         {{ with .Params.tags }}
           <div class="tag-row">
             {{ range . }}
-              <a class="tag" href="{{ "/posts/" | relURL }}?tag={{ . | urlquery }}">{{ . }}</a>
+              <a class="tag" href="{{ printf "%s%s" site.BaseURL "posts/" }}?tag={{ . | urlquery }}">{{ . }}</a>
             {{ end }}
           </div>
         {{ end }}
@@ -80,13 +80,13 @@
 
       <footer class="article-footer-nav">
         {{ with $navScratch.Get "newer" }}
-          <a class="article-nav-card" href="{{ .RelPermalink }}">
+          <a class="article-nav-card" href="{{ .Permalink }}">
             <span class="eyebrow">较新文章</span>
             <strong>{{ .Title }}</strong>
           </a>
         {{ end }}
         {{ with $navScratch.Get "older" }}
-          <a class="article-nav-card" href="{{ .RelPermalink }}">
+          <a class="article-nav-card" href="{{ .Permalink }}">
             <span class="eyebrow">较早文章</span>
             <strong>{{ .Title }}</strong>
           </a>

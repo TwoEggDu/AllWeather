@@ -2,19 +2,19 @@
 {{ $levelLabels := dict "beginner" "入门" "intermediate" "进阶" }}
 <article class="post-card" data-category="{{ $post.Params.category }}" data-tags="{{ delimit $post.Params.tags "|" }}">
   <div class="meta-row">
-    <a class="meta-badge" href="{{ "/posts/" | relURL }}?category={{ $post.Params.category | urlquery }}">{{ $post.Params.category }}</a>
+    <a class="meta-badge" href="{{ printf "%s%s" site.BaseURL "posts/" }}?category={{ $post.Params.category | urlquery }}">{{ $post.Params.category }}</a>
     <span>{{ $post.Date.Format "2006-01-02" }}</span>
     <span>{{ $post.ReadingTime }} 分钟阅读</span>
     {{ with $post.Params.level }}
       <span>{{ index $levelLabels . | default . }}</span>
     {{ end }}
   </div>
-  <h3><a href="{{ $post.RelPermalink }}">{{ $post.Title }}</a></h3>
+  <h3><a href="{{ $post.Permalink }}">{{ $post.Title }}</a></h3>
   <p>{{ with $post.Params.summary }}{{ . }}{{ else }}{{ $post.Summary | plainify | truncate 120 }}{{ end }}</p>
   {{ with $post.Params.tags }}
     <div class="tag-row">
       {{ range first 4 . }}
-        <a class="tag" href="{{ "/posts/" | relURL }}?tag={{ . | urlquery }}">{{ . }}</a>
+        <a class="tag" href="{{ printf "%s%s" site.BaseURL "posts/" }}?tag={{ . | urlquery }}">{{ . }}</a>
       {{ end }}
     </div>
   {{ end }}

@@ -7,10 +7,10 @@
       <p>{{ site.Params.repoNote }}</p>
     </div>
     <div class="footer-links">
-      <a href="{{ "/posts/" | relURL }}">最新文章</a>
-      <a href="{{ "/topics/" | relURL }}">栏目总览</a>
-      <a href="{{ "/glossary/" | relURL }}">词汇表</a>
-      <a href="{{ "/disclaimer/" | relURL }}">免责声明</a>
+      <a href="{{ printf "%s%s" site.BaseURL "posts/" }}">最新文章</a>
+      <a href="{{ printf "%s%s" site.BaseURL "topics/" }}">栏目总览</a>
+      <a href="{{ printf "%s%s" site.BaseURL "glossary/" }}">词汇表</a>
+      <a href="{{ printf "%s%s" site.BaseURL "disclaimer/" }}">免责声明</a>
       {{ with site.Home.OutputFormats.Get "RSS" }}
         <a href="{{ .Permalink }}">RSS</a>
       {{ end }}

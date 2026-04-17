@@ -12,8 +12,8 @@
         它不提供喊单，也不展示虚假收益，而是把研究框架、数据意识与复盘能力慢慢搭起来。
       </p>
       <div class="hero-actions">
-        <a class="button button-primary" href="{{ "/posts/" | relURL }}">开始阅读</a>
-        <a class="button" href="{{ "/about/" | relURL }}">了解这个站点</a>
+        <a class="button button-primary" href="{{ printf "%s%s" site.BaseURL "posts/" }}">开始阅读</a>
+        <a class="button" href="{{ printf "%s%s" site.BaseURL "about/" }}">了解这个站点</a>
       </div>
     </div>
     <div class="hero-note">
@@ -24,7 +24,7 @@
         <li>把“看懂一个词”升级为“说清一条机制链”。</li>
         <li>把复盘写成习惯，而不是把错误留给记忆。</li>
       </ul>
-      <a class="text-link" href="{{ "/disclaimer/" | relURL }}">查看免责声明</a>
+      <a class="text-link" href="{{ printf "%s%s" site.BaseURL "disclaimer/" }}">查看免责声明</a>
     </div>
   </section>
 
@@ -34,7 +34,7 @@
         <p class="eyebrow">Latest Research</p>
         <h2>最新文章</h2>
       </div>
-      <a class="text-link" href="{{ "/posts/" | relURL }}">查看全部文章</a>
+      <a class="text-link" href="{{ printf "%s%s" site.BaseURL "posts/" }}">查看全部文章</a>
     </div>
     <div class="card-grid">
       {{ range first 4 $posts }}
@@ -49,7 +49,7 @@
         <p class="eyebrow">Topics</p>
         <h2>五个核心栏目</h2>
       </div>
-      <a class="text-link" href="{{ "/topics/" | relURL }}">进入栏目总览</a>
+      <a class="text-link" href="{{ printf "%s%s" site.BaseURL "topics/" }}">进入栏目总览</a>
     </div>
     <div class="topic-grid">
       {{ range site.Data.topics }}
