@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node scripts/validate-content.mjs)",
+      "Bash(chmod +x /tmp/audit.sh)",
+      "Bash(/tmp/audit.sh)",
+      "Bash(python3 /tmp/audit_metadata.py)",
+      "Bash(grep \"^slug:\" content/posts/*.md)",
+      "Bash(python3)",
+      "Bash(grep -rh \"\\\\[.*\\\\]\\(\" content/posts/*.md)",
+      "Bash('C:\\\\Users\\\\IGG\\\\AppData\\\\Local\\\\Microsoft\\\\WinGet\\\\Packages\\\\Hugo.Hugo.Extended_Microsoft.Winget.Source_8wekyb3d8bbwe\\\\hugo.exe' --gc --minify)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(gh run:*)",
+      "Bash(python -m tools.fund_bot.main --config data/funds/example/config.json)",
+      "Bash(rm -f data/funds/example/reports/2026-04-12_macro_report.md)",
+      "Bash(mv data/funds tools/fund_bot/funds)",
+      "Bash(python -m tools.fund_bot.main --config tools/fund_bot/funds/example/config.json)",
+      "Bash(find content/posts -name \"*.md\" ! -name \"_index.md\" -exec basename {} .md \\\\;)",
+      "Bash(find content/glossary -name \"*.md\" ! -name \"_index.md\" -exec basename {} .md \\\\;)",
+      "Bash(xargs grep:*)"
+    ]
+  }
+}
