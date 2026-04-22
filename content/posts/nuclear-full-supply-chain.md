@@ -289,8 +289,17 @@ A 股相关：
 
 ## 延伸阅读
 
-- [投资者视角下怎么读中国五年规划](/posts/how-to-read-china-five-year-plans/)
+**十五五产业深度系列：**
+
 - [十五五前瞻：碳排放双控转身、新质生产力锚点、人均预期寿命首次入约束](/posts/china-fyp-15-2026-2030-outlook/)
+- [电网与储能：特高压的硬饭 vs 电池储能的红海](/posts/power-grid-and-storage-infrastructure/)
+- [AI 产业链的分层交易：光模块、算力、国产替代、应用的不同逻辑](/posts/ai-industry-chain-tiers/)
+- [医疗健康：从三年熊市到十五五的估值修复机会](/posts/healthcare-long-cycle-investment/)
+- [粮食安全与农业现代化：转基因商业化是种业的主线](/posts/food-security-and-agri-modernization/)
+
+**相关背景：**
+
+- [投资者视角下怎么读中国五年规划](/posts/how-to-read-china-five-year-plans/)
 - [实际利率、黄金、债券、美元的联动逻辑](/posts/real-rates-gold-bonds-dollar/)
 - [原油价格如何向资产传导](/posts/how-oil-price-transmits-to-assets/)
 
