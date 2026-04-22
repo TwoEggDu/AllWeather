@@ -258,6 +258,16 @@ LME、SMM、Fastmarkets 的铜、镍、钴、锂价格。
 
 ## 延伸阅读
 
+**矿产品种深度系列：**
+
+- [铜：电气化十年的主线金属](/posts/copper-electrification-decade/)
+- [锂：从 60 万跌到 7 万再到哪里](/posts/lithium-cycle-from-peak-to-rebound/)
+- [稀土：中国的"王牌"与永磁需求](/posts/rare-earths-china-strategic-advantage/)
+- [战略小金属与出口管制：事件驱动的主题交易](/posts/strategic-small-metals-and-export-controls/)
+- [铝：产能天花板与电气化需求的小型结构牛](/posts/aluminum-electrification-and-capacity-cap/)
+
+**相关背景：**
+
 - [关键矿产民族主义](/posts/critical-minerals-resource-nationalism/)
 - [能源转型的地缘重构](/posts/energy-transition-geopolitical-restructuring/)
 - [南非与铂族金属](/posts/south-africa-pgms/)

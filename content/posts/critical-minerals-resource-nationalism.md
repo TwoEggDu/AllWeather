@@ -255,9 +255,21 @@ draft: false
 
 ## 延伸阅读
 
+**矿产品种深度系列：**
+
+- [铜：电气化十年的主线金属](/posts/copper-electrification-decade/)
+- [锂：从 60 万跌到 7 万再到哪里](/posts/lithium-cycle-from-peak-to-rebound/)
+- [稀土：中国的"王牌"与永磁需求](/posts/rare-earths-china-strategic-advantage/)
+- [战略小金属与出口管制：事件驱动的主题交易](/posts/strategic-small-metals-and-export-controls/)
+- [白银：工业需求 vs 货币属性的双重角色](/posts/silver-industrial-vs-monetary-dual-role/)
+- [铝：产能天花板与电气化需求的小型结构牛](/posts/aluminum-electrification-and-capacity-cap/)
+
+**相关背景：**
+
 - [美中战略竞争的结构性演进 2017–2030](/posts/us-china-strategic-competition-2017-2030/)
 - [能源转型的地缘重构](/posts/energy-transition-geopolitical-restructuring/)
 - [核能全产业链：从铀矿到反应堆出口](/posts/nuclear-full-supply-chain/)
+- [关键矿产南方供给国](/posts/critical-minerals-global-south-supply/)
 - [资产 × 五年计划映射表](/posts/asset-five-year-plan-mapping/)
 
 ---
