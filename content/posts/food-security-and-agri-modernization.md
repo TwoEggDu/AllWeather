@@ -354,11 +354,18 @@ draft: false
 
 ## 延伸阅读
 
+**十五五产业深度系列：**
+
 - [十五五前瞻：碳排放双控转身、新质生产力锚点、人均预期寿命首次入约束](/posts/china-fyp-15-2026-2030-outlook/)
+- [核能全产业链：从铀矿到反应堆出口的中国机会](/posts/nuclear-full-supply-chain/)
 - [电网与储能：特高压的硬饭 vs 电池储能的红海](/posts/power-grid-and-storage-infrastructure/)
 - [AI 产业链的分层交易：光模块、算力、国产替代、应用的不同逻辑](/posts/ai-industry-chain-tiers/)
 - [医疗健康：从三年熊市到十五五的估值修复机会](/posts/healthcare-long-cycle-investment/)
-- [核能全产业链：从铀矿到反应堆出口的中国机会](/posts/nuclear-full-supply-chain/)
+- [军工产业链：装备代际升级、无人化、军贸出海](/posts/defense-industry-modernization/)
+- [商业航天：低轨星座、火箭复用、卫星互联网](/posts/commercial-aerospace-supply-chain/)
+
+**相关背景：**
+
 - [资产 × 五年计划映射表：把规划信号转化为配置决策](/posts/asset-five-year-plan-mapping/)
 
 ---

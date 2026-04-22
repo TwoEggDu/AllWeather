@@ -296,6 +296,8 @@ A 股相关：
 - [AI 产业链的分层交易：光模块、算力、国产替代、应用的不同逻辑](/posts/ai-industry-chain-tiers/)
 - [医疗健康：从三年熊市到十五五的估值修复机会](/posts/healthcare-long-cycle-investment/)
 - [粮食安全与农业现代化：转基因商业化是种业的主线](/posts/food-security-and-agri-modernization/)
+- [军工产业链：装备代际升级、无人化、军贸出海](/posts/defense-industry-modernization/)
+- [商业航天：低轨星座、火箭复用、卫星互联网](/posts/commercial-aerospace-supply-chain/)
 
 **相关背景：**
 
