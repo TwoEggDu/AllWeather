@@ -2,7 +2,7 @@
 title: 决策日志模板：可直接复制到 Notion / Excel 的结构化记录工具
 slug: decision-journal-template
 date: 2026-04-24T16:30:00+08:00
-summary: [决策日志深度](/posts/decision-journal-deep-dive/) 给了为什么要写决策日志的完整方法论。这篇文章给出可直接复制使用的模板——4 类决策的具体格式，每次复盘的 7 个问题，以及 Notion/Excel 的实操结构。
+summary: "决策日志深度（/posts/decision-journal-deep-dive/）给了为什么要写决策日志的完整方法论。这篇文章给出可直接复制使用的模板——4 类决策的具体格式，每次复盘的 7 个问题，以及 Notion/Excel 的实操结构。"
 category: 交易表达
 tags:
   - 决策日志
