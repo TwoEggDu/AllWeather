@@ -575,6 +575,20 @@ pre {
   margin: 2rem 0;
 }
 
+.prose a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(31, 73, 84, 0.4);
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+  transition: color 0.18s ease, text-decoration-color 0.18s ease;
+}
+
+.prose a:hover {
+  color: var(--accent-strong);
+  text-decoration-color: var(--accent-strong);
+}
+
 .disclaimer-box {
   margin-top: 2.5rem;
   padding: 18px 20px;
