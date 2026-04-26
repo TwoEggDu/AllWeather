@@ -10,8 +10,8 @@ tags:
   - 方法论
   - 系列文章
 level: intermediate
-status: draft
-draft: true
+status: published
+draft: false
 ---
 
 ## 一、一个反复出现的怪现象
