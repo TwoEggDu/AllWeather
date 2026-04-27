@@ -685,6 +685,26 @@ pre {
     color: var(--text);
   }
 
+  .post-card,
+  .topic-card,
+  .glossary-card,
+  .stack-item {
+    background: var(--bg-elevated);
+  }
+
+  .prose blockquote {
+    background: rgba(155, 192, 203, 0.08);
+  }
+
+  .disclaimer-box {
+    background: rgba(217, 142, 96, 0.12);
+    border-color: rgba(217, 142, 96, 0.28);
+  }
+
+  code {
+    background: rgba(155, 192, 203, 0.14);
+  }
+
   .button-primary,
   .filter-chip.is-active {
     background: var(--accent);
