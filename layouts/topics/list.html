@@ -13,7 +13,14 @@
 
   <section class="topic-grid">
     {{ range hugo.Data.topics }}
-      {{ $topicPosts := where $posts "Params.category" .name }}
+      {{ $topic := . }}
+      {{ $topicPosts := slice }}
+      {{ range $posts }}
+        {{ $domains := partial "post-domains.html" . }}
+        {{ if in $domains $topic.name }}
+          {{ $topicPosts = $topicPosts | append . }}
+        {{ end }}
+      {{ end }}
       {{ partial "topic-card.html" (dict "topic" . "count" (len $topicPosts) "posts" $topicPosts) }}
     {{ end }}
   </section>

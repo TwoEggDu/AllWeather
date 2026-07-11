@@ -1,6 +1,6 @@
 baseURL = "https://twoeggdu.github.io/AllWeather/"
 locale = "zh-cn"
-title = "蜗牛全天候"
+title = "蜗牛量化"
 defaultContentLanguage = "zh-cn"
 hasCJKLanguage = true
 enableRobotsTXT = true
@@ -39,10 +39,10 @@ priority = 0.6
     limit = 25
 
 [params]
-description = "一个面向中文读者的全球宏观、宏观对冲与跨资产研究博客，记录从零开始建立研究框架、数据意识与复盘能力的过程。"
-tagline = "理解经济，观察市场，复盘错误。"
-subtitle = "全球宏观 / 宏观对冲 / 跨资产研究"
-repoNote = "更细的研究底稿、模板与实验记录仍保留在仓库原有的中文目录中。"
+description = "蜗牛量化建设的开放中国市场投研知识库，跟踪宏观政策、国家资本、产业基本面、市场资金与全球反馈。"
+tagline = "跟踪政策，验证利润，理解资金，持续复盘。"
+subtitle = "中国政策 / 国家资本 / 产业基本面 / 市场资金"
+repoNote = "顶层设计、研究模板、路线图与系统文档保留在仓库的中文目录中。"
 disclaimer = "本文仅用于学习与研究，不构成任何投资建议。"
 author = "NHT"
 mainSections = ["posts"]

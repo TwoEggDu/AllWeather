@@ -10,7 +10,7 @@
 
   const cards = Array.from(grid.querySelectorAll(".post-card"));
   const state = {
-    category: "",
+    topic: "",
     tag: "",
   };
 
@@ -28,10 +28,10 @@
 
   const updateUrl = () => {
     const url = new URL(window.location.href);
-    if (state.category) {
-      url.searchParams.set("category", state.category);
+    if (state.topic) {
+      url.searchParams.set("topic", state.topic);
     } else {
-      url.searchParams.delete("category");
+      url.searchParams.delete("topic");
     }
     if (state.tag) {
       url.searchParams.set("tag", state.tag);
@@ -44,10 +44,11 @@
   const applyFilters = () => {
     let visibleCount = 0;
     cards.forEach((card) => {
-      const categoryMatch = !state.category || card.dataset.category === state.category;
+      const topics = (card.dataset.topics || "").split("|").filter(Boolean);
+      const topicMatch = !state.topic || topics.includes(state.topic);
       const tags = (card.dataset.tags || "").split("|").filter(Boolean);
       const tagMatch = !state.tag || tags.includes(state.tag);
-      const visible = categoryMatch && tagMatch;
+      const visible = topicMatch && tagMatch;
       card.hidden = !visible;
       if (visible) {
         visibleCount += 1;
@@ -55,8 +56,8 @@
     });
 
     const parts = [];
-    if (state.category) {
-      parts.push("栏目：" + state.category);
+    if (state.topic) {
+      parts.push("研究领域：" + state.topic);
     }
     if (state.tag) {
       parts.push("标签：" + state.tag);
@@ -69,7 +70,7 @@
 
   const setStateFromUrl = () => {
     const params = new URLSearchParams(window.location.search);
-    state.category = params.get("category") || "";
+    state.topic = params.get("topic") || "";
     state.tag = params.get("tag") || "";
   };
 
@@ -88,7 +89,7 @@
   });
 
   resetButton.addEventListener("click", function () {
-    state.category = "";
+    state.topic = "";
     state.tag = "";
     updateButtons();
     applyFilters();

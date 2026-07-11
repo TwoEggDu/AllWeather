@@ -26,5 +26,5 @@
       {{ end }}
     </div>
   {{ end }}
-  <a class="text-link" href="{{ printf "%s%s" site.BaseURL "posts/" }}?category={{ $topic.name | urlquery }}">查看这个栏目 <span aria-hidden="true">→</span></a>
+  <a class="text-link" href="{{ printf "%s%s" site.BaseURL "posts/" }}?topic={{ $topic.name | urlquery }}">查看这个研究领域 <span aria-hidden="true">→</span></a>
 </article>

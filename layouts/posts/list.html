@@ -24,8 +24,8 @@
 
   <section class="panel filters-panel" id="posts-filters">
     <div class="filter-block">
-      <span class="filter-label">按栏目筛选</span>
-      <div class="filter-chip-row" data-filter-group="category">
+      <span class="filter-label">按研究领域筛选</span>
+      <div class="filter-chip-row" data-filter-group="topic">
         <button class="filter-chip is-active" type="button" data-filter-value="">全部</button>
         {{ range hugo.Data.topics }}
           <button class="filter-chip" type="button" data-filter-value="{{ .name }}">{{ .name }}</button>

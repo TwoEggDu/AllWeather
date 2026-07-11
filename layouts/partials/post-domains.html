@@ -1,0 +1,21 @@
+{{- $post := . -}}
+{{- $tags := $post.Params.tags | default (slice) -}}
+{{- $category := $post.Params.category | default "" -}}
+{{- $domains := slice -}}
+{{- range $topic := hugo.Data.topics -}}
+  {{- $matched := eq $category $topic.name -}}
+  {{- range $topic.match_categories -}}
+    {{- if eq $category . -}}
+      {{- $matched = true -}}
+    {{- end -}}
+  {{- end -}}
+  {{- range $topic.match_tags -}}
+    {{- if in $tags . -}}
+      {{- $matched = true -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if $matched -}}
+    {{- $domains = $domains | append $topic.name -}}
+  {{- end -}}
+{{- end -}}
+{{- return $domains -}}

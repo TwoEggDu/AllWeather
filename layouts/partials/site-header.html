@@ -1,5 +1,5 @@
 {{ $navItems := slice
-  (dict "url" "/macro-index/" "label" "研究索引")
+  (dict "url" "/macro-index/" "label" "投研地图")
   (dict "url" "/posts/" "label" "全部文章")
   (dict "url" "/topics/" "label" "研究栏目")
   (dict "url" "/glossary/" "label" "术语库")
@@ -9,8 +9,8 @@
   <a class="brand" href="{{ site.Home.Permalink }}" aria-label="{{ site.Title }}首页">
     <span class="brand-mark" aria-hidden="true"><i></i><b>AW</b></span>
     <span class="brand-copy">
-      <strong>蜗牛全天候</strong>
-      <span>All Weather Research</span>
+      <strong>蜗牛量化</strong>
+      <span>Open China Research</span>
     </span>
   </a>
   <nav class="site-nav" aria-label="主导航">
@@ -24,5 +24,5 @@
       <a class="{{ if $isActive }}is-active{{ end }}" href="{{ $href }}">{{ .label }}</a>
     {{ end }}
   </nav>
-  <a class="header-cta" href="{{ printf "%s%s" site.BaseURL "posts/" }}">开始阅读 <span aria-hidden="true">↗</span></a>
+  <a class="header-cta" href="{{ printf "%s%s" site.BaseURL "macro-index/" }}">开始研究 <span aria-hidden="true">↗</span></a>
 </header>

@@ -19,6 +19,7 @@
   {{ else }}
     {{ $levelLabels := dict "beginner" "入门" "intermediate" "进阶" }}
     {{ $statusLabels := dict "draft" "草稿" "published" "已发布" }}
+    {{ $domains := partial "post-domains.html" . }}
     {{ $siblings := where .CurrentSection.RegularPages "Params.status" "published" }}
     {{ $siblings = where $siblings "Draft" false }}
     {{ $siblings = $siblings.ByDate.Reverse }}
@@ -40,7 +41,12 @@
     <article class="article article-post">
       <header class="article-header">
         <div class="meta-row">
-          <a class="meta-badge" href="{{ printf "%s%s" site.BaseURL "posts/" }}?category={{ .Params.category | urlquery }}">{{ .Params.category }}</a>
+          {{ if gt (len $domains) 0 }}
+            {{ $primaryDomain := index $domains 0 }}
+            <a class="meta-badge" href="{{ printf "%s%s" site.BaseURL "posts/" }}?topic={{ $primaryDomain | urlquery }}">{{ $primaryDomain }}</a>
+          {{ else }}
+            <span class="meta-badge">{{ .Params.category }}</span>
+          {{ end }}
           <span>{{ .Date.Format "2006-01-02" }}</span>
           <span>{{ .ReadingTime }} 分钟阅读</span>
           {{ with .Params.level }}

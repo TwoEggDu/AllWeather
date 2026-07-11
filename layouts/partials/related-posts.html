@@ -1,11 +1,17 @@
-{{ $related := where .CurrentSection.RegularPages "Params.category" .Params.category }}
-{{ $related = where $related "Params.status" "published" }}
-{{ $related = where $related "Draft" false }}
-{{ $related = where $related "RelPermalink" "ne" .RelPermalink }}
-{{ $related = $related.ByDate.Reverse }}
+{{ $currentDomains := partial "post-domains.html" . }}
+{{ $related := slice }}
+{{ range .CurrentSection.RegularPages.ByDate.Reverse }}
+  {{ $isCandidate := and (eq .Params.status "published") (not .Draft) (ne .RelPermalink $.RelPermalink) }}
+  {{ if $isCandidate }}
+    {{ $candidateDomains := partial "post-domains.html" . }}
+    {{ if gt (len (intersect $currentDomains $candidateDomains)) 0 }}
+      {{ $related = $related | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 {{ if gt (len $related) 0 }}
 <section class="article-related">
-  <p class="eyebrow">同栏目文章</p>
+  <p class="eyebrow">同研究领域文章</p>
   <div class="article-footer-nav">
     {{ range first 4 $related }}
       <a class="article-nav-card" href="{{ .Permalink }}">

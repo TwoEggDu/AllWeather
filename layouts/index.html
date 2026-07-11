@@ -7,10 +7,10 @@
 
   <section class="hero hero-home">
     <div class="hero-copy-block">
-      <p class="eyebrow"><span class="eyebrow-line"></span> Independent macro research journal</p>
-      <h1>在噪音之上，<br><em>看见周期。</em></h1>
+      <p class="eyebrow"><span class="eyebrow-line"></span> Open China market research</p>
+      <h1>从政策到利润，<br><em>看懂中国市场。</em></h1>
       <p class="hero-copy">
-        用增长、通胀、流动性与风险偏好的共同语言，理解全球宏观如何穿过市场，最终落到资产价格与个人决策。
+        一个面向所有研究者的开放知识库：跟踪宏观政策、国家资本、产业基本面和市场资金，并分析全球变化如何影响中国资产。
       </p>
       <div class="hero-actions">
         <a class="button button-primary" href="{{ printf "%s%s" site.BaseURL "macro-index/" }}">从研究地图开始 <span aria-hidden="true">↗</span></a>
@@ -23,25 +23,23 @@
       </dl>
     </div>
 
-    <aside class="research-board" aria-label="宏观四象限研究框架">
+    <aside class="research-board" aria-label="中国市场定价链">
       <div class="board-head">
         <div>
           <span class="board-kicker">FRAMEWORK 01</span>
-          <h2>宏观天气图</h2>
+          <h2>中国市场定价链</h2>
         </div>
         <span class="board-status"><i></i> 持续更新</span>
       </div>
-      <p class="board-intro">不是预测明天，而是判断我们正身处怎样的环境。</p>
+      <p class="board-intro">不为涨跌编故事，而是跟踪每个环节的证据。</p>
       <div class="weather-map">
-        <div class="weather-axis weather-axis-y"><span>通胀 ↑</span><span>通胀 ↓</span></div>
-        <div class="weather-axis weather-axis-x"><span>增长 ↓</span><span>增长 ↑</span></div>
-        <div class="weather-cell"><span>01</span><strong>滞胀</strong><small>防御 / 实物资产</small></div>
-        <div class="weather-cell is-accent"><span>02</span><strong>过热</strong><small>商品 / 周期资产</small></div>
-        <div class="weather-cell"><span>03</span><strong>衰退</strong><small>久期 / 高质量资产</small></div>
-        <div class="weather-cell"><span>04</span><strong>复苏</strong><small>权益 / 信用资产</small></div>
+        <div class="weather-cell"><span>01</span><strong>宏观政策</strong><small>方向 / 约束</small></div>
+        <div class="weather-cell is-accent"><span>02</span><strong>国家资本</strong><small>资金 / 项目</small></div>
+        <div class="weather-cell"><span>03</span><strong>基本面</strong><small>需求 / 利润</small></div>
+        <div class="weather-cell"><span>04</span><strong>市场资金</strong><small>定价 / 拥挤</small></div>
       </div>
       <div class="board-foot">
-        <span>变量</span><b>→</b><span>定价</span><b>→</b><span>表达</span><b>→</b><span>复盘</span>
+        <span>全球输入</span><b>→</b><span>中国定价</span><b>→</b><span>全球反馈</span>
       </div>
     </aside>
   </section>
@@ -64,15 +62,15 @@
   <section class="editorial-section route-section">
     <div class="route-intro">
       <p class="eyebrow">Start here</p>
-      <h2>一条可重复的<br>研究路径</h2>
-      <p>不追逐孤立结论。先建立语言，再理解定价，最后把观点放进风险约束里检验。</p>
+      <h2>从事实出发的<br>研究路径</h2>
+      <p>不追逐孤立结论。把政策、资金、基本面和价格行为放进同一条可验证链条。</p>
       <a class="text-link" href="{{ printf "%s%s" site.BaseURL "macro-index/" }}">打开完整研究索引 <span aria-hidden="true">→</span></a>
     </div>
     <ol class="route-list">
-      <li><span>01</span><div><h3>理解变量</h3><p>增长、通胀、流动性与利率。</p></div></li>
-      <li><span>02</span><div><h3>拆解定价</h3><p>预期如何进入股、债、汇、商品。</p></div></li>
-      <li><span>03</span><div><h3>选择表达</h3><p>用工具、期限和风险预算约束观点。</p></div></li>
-      <li><span>04</span><div><h3>持续复盘</h3><p>保留前提、反例与修正路径。</p></div></li>
+      <li><span>01</span><div><h3>识别政策</h3><p>区分表态、文件、预算和执行。</p></div></li>
+      <li><span>02</span><div><h3>跟踪资金</h3><p>确认资金来源、执行主体和项目落地。</p></div></li>
+      <li><span>03</span><div><h3>验证利润</h3><p>检查需求、价格、产能、订单和现金流。</p></div></li>
+      <li><span>04</span><div><h3>观察定价</h3><p>记录价格、广度、持仓代理指标和后续证伪。</p></div></li>
     </ol>
   </section>
 
@@ -80,13 +78,19 @@
     <div class="section-head">
       <div>
         <p class="eyebrow">Research desk</p>
-        <h2>五个研究栏目</h2>
+        <h2>六个研究入口</h2>
       </div>
-      <p class="section-note">从基础变量到决策复盘，构成一套完整的宏观研究工作流。</p>
+      <p class="section-note">从政策到利润，从中国定价到全球反馈，构成一条可检验的研究链。</p>
     </div>
     <div class="topic-grid">
       {{ range $index, $topic := hugo.Data.topics }}
-        {{ $topicPosts := where $posts "Params.category" $topic.name }}
+        {{ $topicPosts := slice }}
+        {{ range $posts }}
+          {{ $domains := partial "post-domains.html" . }}
+          {{ if in $domains $topic.name }}
+            {{ $topicPosts = $topicPosts | append . }}
+          {{ end }}
+        {{ end }}
         {{ partial "topic-card.html" (dict "topic" $topic "count" (len $topicPosts) "posts" $topicPosts "index" $index) }}
       {{ end }}
     </div>
@@ -97,7 +101,7 @@
     <blockquote>研究不是为了显得正确，<br>而是为了更快地发现自己<em>错在哪里。</em></blockquote>
     <div class="manifesto-foot">
       <p>这里不提供喊单，不展示虚假收益。每一篇文章都尽量留下可验证的判断、反例和后续复盘路径。</p>
-      <a class="button button-inverse" href="{{ printf "%s%s" site.BaseURL "about/" }}">关于这份研究日志</a>
+      <a class="button button-inverse" href="{{ printf "%s%s" site.BaseURL "about/" }}">了解开放研究原则</a>
     </div>
   </section>
 
