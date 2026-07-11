@@ -1,6 +1,6 @@
 baseURL = "https://twoeggdu.github.io/AllWeather/"
 locale = "zh-cn"
-title = "宏观全天候研究日志"
+title = "蜗牛全天候"
 defaultContentLanguage = "zh-cn"
 hasCJKLanguage = true
 enableRobotsTXT = true
