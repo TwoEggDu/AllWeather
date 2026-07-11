@@ -1,32 +1,28 @@
 {{ $navItems := slice
-  (dict "url" "/" "label" "首页")
-  (dict "url" "/macro-index/" "label" "索引")
-  (dict "url" "/posts/" "label" "文章")
-  (dict "url" "/topics/" "label" "栏目")
-  (dict "url" "/glossary/" "label" "词汇表")
+  (dict "url" "/macro-index/" "label" "研究索引")
+  (dict "url" "/posts/" "label" "全部文章")
+  (dict "url" "/topics/" "label" "研究栏目")
+  (dict "url" "/glossary/" "label" "术语库")
   (dict "url" "/about/" "label" "关于")
 }}
 <header class="site-header">
-  <a class="brand" href="{{ site.Home.Permalink }}">
-    <span class="brand-mark">AW</span>
+  <a class="brand" href="{{ site.Home.Permalink }}" aria-label="{{ site.Title }}首页">
+    <span class="brand-mark" aria-hidden="true"><i></i><b>AW</b></span>
     <span class="brand-copy">
-      <strong>{{ site.Title }}</strong>
-      <span>{{ site.Params.subtitle }}</span>
+      <strong>宏观全天候</strong>
+      <span>All Weather Research</span>
     </span>
   </a>
   <nav class="site-nav" aria-label="主导航">
     {{ range $navItems }}
       {{ $isActive := false }}
-      {{ $href := site.Home.Permalink }}
-      {{ if eq .url "/" }}
-        {{ $isActive = $.IsHome }}
-      {{ else }}
-        {{ if hasPrefix $.RelPermalink .url }}
-          {{ $isActive = true }}
-        {{ end }}
-        {{ $href = printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .url) }}
+      {{ $href := printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .url) }}
+      {{ $navPath := printf "%s%s" site.Home.RelPermalink (strings.TrimPrefix "/" .url) }}
+      {{ if hasPrefix $.RelPermalink $navPath }}
+        {{ $isActive = true }}
       {{ end }}
       <a class="{{ if $isActive }}is-active{{ end }}" href="{{ $href }}">{{ .label }}</a>
     {{ end }}
   </nav>
+  <a class="header-cta" href="{{ printf "%s%s" site.BaseURL "posts/" }}">开始阅读 <span aria-hidden="true">↗</span></a>
 </header>

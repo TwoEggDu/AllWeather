@@ -2,6 +2,7 @@
 {{ $count := .count }}
 {{ $posts := .posts }}
 <article class="topic-card">
+  {{ if isset . "index" }}<span class="topic-index">0{{ add .index 1 }}</span>{{ end }}
   <div class="topic-card-head">
     <div>
       <p class="eyebrow">Topic</p>
@@ -25,5 +26,5 @@
       {{ end }}
     </div>
   {{ end }}
-  <a class="text-link" href="{{ printf "%s%s" site.BaseURL "posts/" }}?category={{ $topic.name | urlquery }}">查看这个栏目</a>
+  <a class="text-link" href="{{ printf "%s%s" site.BaseURL "posts/" }}?category={{ $topic.name | urlquery }}">查看这个栏目 <span aria-hidden="true">→</span></a>
 </article>

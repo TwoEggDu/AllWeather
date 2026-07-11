@@ -1,23 +1,26 @@
 <footer class="site-footer">
-  <div class="footer-main">
-    <div>
-      <p class="eyebrow">Research Journal</p>
-      <p class="footer-title">{{ site.Title }}</p>
-      <p>{{ site.Params.tagline }}</p>
-      <p>{{ site.Params.repoNote }}</p>
-    </div>
-    <div class="footer-links">
-      <a href="{{ printf "%s%s" site.BaseURL "posts/" }}">最新文章</a>
-      <a href="{{ printf "%s%s" site.BaseURL "topics/" }}">栏目总览</a>
-      <a href="{{ printf "%s%s" site.BaseURL "glossary/" }}">词汇表</a>
-      <a href="{{ printf "%s%s" site.BaseURL "disclaimer/" }}">免责声明</a>
-      {{ with site.Home.OutputFormats.Get "RSS" }}
-        <a href="{{ .Permalink }}">RSS</a>
-      {{ end }}
-    </div>
+  <div class="footer-brand">
+    <a class="brand" href="{{ site.Home.Permalink }}">
+      <span class="brand-mark" aria-hidden="true"><i></i><b>AW</b></span>
+      <span class="brand-copy"><strong>宏观全天候</strong><span>All Weather Research</span></span>
+    </a>
+    <p>{{ site.Params.tagline }}<br>一份持续进化的独立研究日志。</p>
+  </div>
+  <div class="footer-nav-group">
+    <p class="eyebrow">Explore</p>
+    <a href="{{ printf "%s%s" site.BaseURL "macro-index/" }}">研究索引</a>
+    <a href="{{ printf "%s%s" site.BaseURL "posts/" }}">全部文章</a>
+    <a href="{{ printf "%s%s" site.BaseURL "topics/" }}">研究栏目</a>
+    <a href="{{ printf "%s%s" site.BaseURL "glossary/" }}">术语库</a>
+  </div>
+  <div class="footer-nav-group">
+    <p class="eyebrow">Elsewhere</p>
+    <a href="{{ printf "%s%s" site.BaseURL "about/" }}">关于本站</a>
+    <a href="{{ printf "%s%s" site.BaseURL "disclaimer/" }}">免责声明</a>
+    {{ with site.Home.OutputFormats.Get "RSS" }}<a href="{{ .Permalink }}">RSS 订阅</a>{{ end }}
   </div>
   <div class="footer-note">
     <p>{{ site.Params.disclaimer }}</p>
-    <p>&copy; {{ now.Year }} {{ site.Params.author }}</p>
+    <p>© {{ now.Year }} {{ site.Params.author }}</p>
   </div>
 </footer>

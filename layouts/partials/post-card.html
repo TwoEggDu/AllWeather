@@ -1,6 +1,7 @@
 {{ $post := .post }}
 {{ $levelLabels := dict "beginner" "入门" "intermediate" "进阶" }}
-<article class="post-card" data-category="{{ $post.Params.category }}" data-tags="{{ delimit $post.Params.tags "|" }}">
+<article class="post-card{{ if .featured }} post-card-featured{{ end }}" data-category="{{ $post.Params.category }}" data-tags="{{ delimit $post.Params.tags "|" }}">
+  {{ if isset . "index" }}<span class="post-index">0{{ add .index 1 }}</span>{{ end }}
   <div class="meta-row">
     <a class="meta-badge" href="{{ printf "%s%s" site.BaseURL "posts/" }}?category={{ $post.Params.category | urlquery }}">{{ $post.Params.category }}</a>
     <span>{{ $post.Date.Format "2006-01-02" }}</span>
@@ -9,7 +10,7 @@
       <span>{{ index $levelLabels . | default . }}</span>
     {{ end }}
   </div>
-  <h3><a href="{{ $post.Permalink }}">{{ $post.Title }}</a></h3>
+  <h3><a href="{{ $post.Permalink }}">{{ $post.Title }} <span aria-hidden="true">↗</span></a></h3>
   <p>{{ with $post.Params.summary }}{{ . }}{{ else }}{{ $post.Summary | plainify | truncate 120 }}{{ end }}</p>
   {{ with $post.Params.tags }}
     <div class="tag-row">
