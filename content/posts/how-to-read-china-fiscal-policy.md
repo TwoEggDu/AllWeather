@@ -11,6 +11,16 @@ tags:
   - 基建
   - 赤字
 level: intermediate
+research_layer: model
+research_domains:
+  - policy
+  - state-capital
+market_scope:
+  - a-share
+  - rates
+review_cycle: annual
+maintainer: ""
+review_status: current
 status: published
 draft: false
 ---

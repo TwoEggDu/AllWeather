@@ -24,6 +24,33 @@ summary: 从研究问题、事实数据、政策资金、基本面、市场定�
 - 推断需要说明因果链，并保留其他可能解释。
 - 假设需要明确的验证条件和失效条件。
 
+## 研究元数据
+
+新文章优先使用以下字段：
+
+```yaml
+research_layer: current
+research_domains:
+  - policy
+  - state-capital
+market_scope:
+  - a-share
+as_of: 2026-07-12
+review_cycle: monthly
+maintainer: ""
+review_status: current
+```
+
+- `research_layer`：`current`、`model`、`reference`、`archive`。
+- `research_domains`：可同时选择 `policy`、`state-capital`、`fundamental`、`market-flow`、`global-china`、`review` 中的多个领域。
+- `market_scope`：`a-share`、`hong-kong`、`rmb`、`rates`、`commodities`、`cross-market` 中的一个或多个市场范围。
+- `as_of`：`current` 层级的文章必填，使用 `YYYY-MM-DD` 格式。
+- `review_cycle`：`static`、`event-driven`、`weekly`、`monthly`、`quarterly`、`annual`。
+- `review_status`：`current`、`needs-review`、`historical-snapshot`。
+- `maintainer`：可选的维护人或主要贡献者，不是阅读或贡献的门槛。
+
+旧文章在迁移期间无需补齐这些字段。但一旦开始使用研究元数据，必须填写层级、研究领域、市场范围、复核周期和复核状态；`current` 文章还必须填写数据截止日期。
+
 ## 两种模板
 
 仓库提供：

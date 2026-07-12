@@ -19,6 +19,10 @@
   {{ else }}
     {{ $levelLabels := dict "beginner" "入门" "intermediate" "进阶" }}
     {{ $statusLabels := dict "draft" "草稿" "published" "已发布" }}
+    {{ $researchLayerLabels := dict "current" "当前研究" "model" "机制模型" "reference" "背景参考" "archive" "历史归档" }}
+    {{ $researchDomainLabels := dict "policy" "宏观与政策" "state-capital" "国家资本与产业资金" "fundamental" "行业与企业基本面" "market-flow" "市场资金与交易结构" "global-china" "全球变量与中国资产" "review" "热点跟踪与研究复盘" }}
+    {{ $reviewCycleLabels := dict "static" "静态" "event-driven" "事件触发" "weekly" "每周" "monthly" "每月" "quarterly" "每季" "annual" "每年" }}
+    {{ $reviewStatusLabels := dict "current" "当前有效" "needs-review" "待复核" "historical-snapshot" "历史快照" }}
     {{ $domains := partial "post-domains.html" . }}
     {{ $siblings := where .CurrentSection.RegularPages "Params.status" "published" }}
     {{ $siblings = where $siblings "Draft" false }}
@@ -59,6 +63,32 @@
         <h1>{{ .Title }}</h1>
         {{ with .Params.summary }}
           <p class="article-summary">{{ . }}</p>
+        {{ end }}
+        {{ if or .Params.research_layer .Params.research_domains .Params.as_of .Params.review_cycle .Params.review_status }}
+          <dl class="research-meta" aria-label="研究元数据">
+            {{ with .Params.research_layer }}
+              <div><dt>研究层级</dt><dd>{{ index $researchLayerLabels . | default . }}</dd></div>
+            {{ end }}
+            {{ with .Params.research_domains }}
+              {{ $domainLabels := slice }}
+              {{ range . }}
+                {{ $domainLabels = $domainLabels | append (index $researchDomainLabels . | default .) }}
+              {{ end }}
+              <div><dt>研究领域</dt><dd>{{ delimit $domainLabels "、" }}</dd></div>
+            {{ end }}
+            {{ with .Params.market_scope }}
+              <div><dt>市场范围</dt><dd>{{ delimit . "、" }}</dd></div>
+            {{ end }}
+            {{ with .Params.as_of }}
+              <div><dt>数据截止</dt><dd>{{ . }}</dd></div>
+            {{ end }}
+            {{ with .Params.review_cycle }}
+              <div><dt>复核周期</dt><dd>{{ index $reviewCycleLabels . | default . }}</dd></div>
+            {{ end }}
+            {{ with .Params.review_status }}
+              <div><dt>复核状态</dt><dd>{{ index $reviewStatusLabels . | default . }}</dd></div>
+            {{ end }}
+          </dl>
         {{ end }}
         {{ with .Params.tags }}
           <div class="tag-row">

@@ -11,6 +11,17 @@ tags:
   - 新型储能
   - 十五五
 level: intermediate
+research_layer: current
+research_domains:
+  - policy
+  - state-capital
+  - fundamental
+market_scope:
+  - a-share
+as_of: 2026-04-23
+review_cycle: quarterly
+maintainer: ""
+review_status: needs-review
 status: published
 draft: false
 ---

@@ -11,6 +11,16 @@ tags:
   - 信号追踪
   - 实操指南
 level: intermediate
+research_layer: current
+research_domains:
+  - state-capital
+  - market-flow
+market_scope:
+  - a-share
+as_of: 2026-04-24
+review_cycle: quarterly
+maintainer: ""
+review_status: needs-review
 status: published
 draft: false
 ---
