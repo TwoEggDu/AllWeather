@@ -122,8 +122,9 @@ pre {
   color: #fff;
   background: var(--accent);
   font-family: "Aptos", "Segoe UI", sans-serif;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
 }
 
 .brand-copy {
@@ -422,6 +423,363 @@ pre {
   font-size: 1.18rem;
 }
 
+.lite-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 560px;
+  align-items: stretch;
+  background:
+    linear-gradient(135deg, rgba(255, 253, 250, 0.96), rgba(231, 239, 238, 0.9)),
+    var(--bg-elevated);
+}
+
+.lite-hero::after {
+  content: "";
+  position: absolute;
+  right: -120px;
+  bottom: -160px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  border: 1px solid rgba(31, 73, 84, 0.12);
+  box-shadow:
+    0 0 0 48px rgba(31, 73, 84, 0.035),
+    0 0 0 96px rgba(31, 73, 84, 0.025);
+  pointer-events: none;
+}
+
+.lite-hero .hero-copy-block,
+.lite-hero .hero-note {
+  position: relative;
+  z-index: 1;
+}
+
+.lite-hero h1 {
+  max-width: 11ch;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 9px;
+  padding: 7px 12px;
+  border: 1px solid rgba(31, 73, 84, 0.2);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.68);
+  color: var(--accent-strong);
+  font-family: "Aptos", "Segoe UI", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.status-badge span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3c8a68;
+  box-shadow: 0 0 0 4px rgba(60, 138, 104, 0.12);
+}
+
+.hero-footnote,
+.section-note {
+  margin: 0;
+  color: var(--muted);
+  font-family: "Aptos", "Segoe UI", sans-serif;
+  font-size: 0.86rem;
+}
+
+.lite-summary {
+  justify-content: space-between;
+  background: rgba(21, 52, 61, 0.94);
+  color: #fff;
+}
+
+.lite-summary .eyebrow,
+.lite-summary .text-link,
+.lite-summary dd {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.summary-list {
+  display: grid;
+  gap: 0;
+  margin: 0;
+}
+
+.summary-list div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 14px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.summary-list dt,
+.summary-list dd {
+  margin: 0;
+}
+
+.summary-list dt {
+  font-weight: 700;
+}
+
+.status-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  margin: 22px 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--line);
+  box-shadow: var(--shadow);
+}
+
+.status-strip div {
+  display: grid;
+  gap: 3px;
+  padding: 18px 20px;
+  background: var(--paper);
+}
+
+.status-strip strong {
+  color: var(--accent-strong);
+}
+
+.status-strip span {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.lite-section h2,
+.boundary-card h2,
+.callout-panel h2 {
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+}
+
+.layer-flow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.layer-card {
+  position: relative;
+  min-height: 220px;
+  padding: 22px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.7), rgba(232, 239, 237, 0.55));
+}
+
+.layer-card:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  right: -13px;
+  z-index: 2;
+  width: 14px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.layer-index {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  font-family: "Aptos", "Segoe UI", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.layer-card h3 {
+  margin: 42px 0 8px;
+  font-size: 1.25rem;
+}
+
+.layer-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.asset-panel {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(195, 172, 98, 0.16), transparent 26%),
+    var(--bg-elevated);
+}
+
+.asset-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 12px;
+}
+
+.asset-card {
+  min-height: 170px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--asset-color, var(--accent));
+  border-radius: var(--radius-md);
+  background: rgba(255, 253, 249, 0.88);
+}
+
+.asset-card span {
+  color: var(--muted);
+  font-family: "Aptos", "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.asset-card h3 {
+  margin: 30px 0 6px;
+  font-size: 1.28rem;
+}
+
+.asset-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.asset-cash { --asset-color: #7198a2; }
+.asset-bond { --asset-color: #586e91; }
+.asset-dividend { --asset-color: #638363; }
+.asset-index { --asset-color: #a56d4e; }
+.asset-growth { --asset-color: #955c7d; }
+.asset-gold { --asset-color: #c19a3f; }
+
+.boundary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  margin-top: 22px;
+}
+
+.boundary-card {
+  margin: 0;
+}
+
+.boundary-do {
+  background: linear-gradient(135deg, rgba(236, 245, 238, 0.94), rgba(255, 253, 250, 0.9));
+}
+
+.boundary-stop {
+  background: linear-gradient(135deg, rgba(248, 238, 231, 0.94), rgba(255, 253, 250, 0.9));
+}
+
+.check-list,
+.cross-list {
+  display: grid;
+  gap: 12px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.check-list li,
+.cross-list li {
+  position: relative;
+  padding-left: 30px;
+}
+
+.check-list li::before,
+.cross-list li::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: "Aptos", "Segoe UI", sans-serif;
+  font-weight: 800;
+}
+
+.check-list li::before { content: "✓"; color: #3c7f5c; }
+.cross-list li::before { content: "—"; color: #a35f3d; }
+
+.roadmap-line {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.roadmap-line li {
+  position: relative;
+  display: grid;
+  gap: 6px;
+  padding: 20px 16px 8px 0;
+  border-top: 2px solid var(--line-strong);
+}
+
+.roadmap-line li::before {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--paper);
+  border: 2px solid var(--line-strong);
+}
+
+.roadmap-line li.is-current {
+  border-color: var(--accent);
+}
+
+.roadmap-line li.is-current::before {
+  background: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 5px rgba(31, 73, 84, 0.1);
+}
+
+.roadmap-line span,
+.roadmap-line small {
+  color: var(--muted);
+  font-family: "Aptos", "Segoe UI", sans-serif;
+}
+
+.roadmap-line span {
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.roadmap-line small {
+  font-size: 0.82rem;
+}
+
+.callout-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  background: var(--accent-strong);
+  color: #fff;
+}
+
+.callout-panel p:not(.eyebrow) {
+  max-width: 70ch;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.callout-panel .eyebrow {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.callout-panel .button-primary {
+  flex: 0 0 auto;
+  border-color: #fff;
+  background: #fff;
+  color: var(--accent-strong);
+}
+
 .page-heading + .panel,
 .page-heading + .card-grid,
 .page-heading + .topic-grid,
@@ -692,6 +1050,19 @@ pre {
     background: var(--bg-elevated);
   }
 
+  .lite-hero,
+  .asset-panel,
+  .boundary-do,
+  .boundary-stop {
+    background: var(--bg-elevated);
+  }
+
+  .status-strip div,
+  .asset-card,
+  .layer-card {
+    background: var(--paper);
+  }
+
   .prose blockquote {
     background: rgba(155, 192, 203, 0.08);
   }
@@ -736,6 +1107,39 @@ pre {
   .hero-home,
   .footer-main {
     grid-template-columns: 1fr;
+  }
+
+  .status-strip,
+  .layer-flow,
+  .asset-grid,
+  .boundary-grid,
+  .roadmap-line {
+    grid-template-columns: 1fr;
+  }
+
+  .layer-card {
+    min-height: auto;
+  }
+
+  .layer-card:not(:last-child)::after {
+    content: "↓";
+    top: auto;
+    right: 50%;
+    bottom: -15px;
+  }
+
+  .layer-card h3,
+  .asset-card h3 {
+    margin-top: 18px;
+  }
+
+  .asset-card {
+    min-height: auto;
+  }
+
+  .callout-panel {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .section-head,

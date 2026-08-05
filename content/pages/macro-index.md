@@ -2,6 +2,9 @@
 title: 宏观研究索引
 url: /macro-index/
 summary: 这不是一篇讲完宏观经济的文章，而是一张阅读地图：从变量、机制、数据到资产表达，帮助初学者找到进入这个站点的顺序。
+build:
+  render: never
+  list: never
 ---
 
 这不是一篇试图讲完宏观经济的文章，而是一张阅读地图。

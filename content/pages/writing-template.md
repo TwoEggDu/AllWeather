@@ -1,6 +1,9 @@
 ---
 title: 写作模板
 url: /writing-template/
+build:
+  render: never
+  list: never
 summary: 研究型文章的推荐结构，以及如何在 Hugo 中复用模板开始新文章。
 ---
 

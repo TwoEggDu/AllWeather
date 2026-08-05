@@ -1,14 +1,14 @@
 {{ $navItems := slice
   (dict "url" "/" "label" "首页")
-  (dict "url" "/macro-index/" "label" "索引")
-  (dict "url" "/posts/" "label" "文章")
-  (dict "url" "/topics/" "label" "栏目")
-  (dict "url" "/glossary/" "label" "词汇表")
-  (dict "url" "/about/" "label" "关于")
+  (dict "url" "/design/" "label" "系统设计")
+  (dict "url" "/scope/" "label" "边界")
+  (dict "url" "/roadmap/" "label" "路线图")
+  (dict "url" "/status/" "label" "状态")
+  (dict "url" "/decision-log/" "label" "决策记录")
 }}
 <header class="site-header">
   <a class="brand" href="{{ site.Home.Permalink }}">
-    <span class="brand-mark">AW</span>
+    <span class="brand-mark">蜗牛</span>
     <span class="brand-copy">
       <strong>{{ site.Title }}</strong>
       <span>{{ site.Params.subtitle }}</span>
@@ -21,10 +21,8 @@
       {{ if eq .url "/" }}
         {{ $isActive = $.IsHome }}
       {{ else }}
-        {{ if hasPrefix $.RelPermalink .url }}
-          {{ $isActive = true }}
-        {{ end }}
-        {{ $href = printf "%s%s" site.BaseURL (strings.TrimPrefix "/" .url) }}
+        {{ if hasPrefix $.RelPermalink .url }}{{ $isActive = true }}{{ end }}
+        {{ $href = strings.TrimPrefix "/" .url | relURL }}
       {{ end }}
       <a class="{{ if $isActive }}is-active{{ end }}" href="{{ $href }}">{{ .label }}</a>
     {{ end }}

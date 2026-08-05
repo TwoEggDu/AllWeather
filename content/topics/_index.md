@@ -1,6 +1,14 @@
 ---
 title: 栏目总览
 summary: 站点围绕五个长期栏目组织：宏观基础、市场机制、数据解读、交易表达、复盘纠错。
+build:
+  render: never
+  list: never
+cascade:
+  build:
+    render: never
+    list: never
+    publishResources: false
 ---
 
 栏目不是为了把内容分散，而是为了把同一条学习路径拆成可持续维护的五个问题域：

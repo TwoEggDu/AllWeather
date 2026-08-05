@@ -1,6 +1,14 @@
 ---
 title: 全部文章
 summary: 按栏目、标签和研究问题组织的中文宏观研究文章。
+build:
+  render: never
+  list: never
+cascade:
+  build:
+    render: never
+    list: never
+    publishResources: false
 ---
 
 这里收录公开发布的研究型文章。

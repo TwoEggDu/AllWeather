@@ -1,17 +1,9 @@
 {{- $pages := slice site.Home -}}
-{{- range site.Sections -}}
-  {{- $pages = $pages | append . -}}
-{{- end -}}
 {{- range site.RegularPages -}}
-  {{- if eq .Section "posts" -}}
-    {{- if and (eq .Params.status "published") (not .Draft) -}}
-      {{- $pages = $pages | append . -}}
-    {{- end -}}
-  {{- else if not .Draft -}}
+  {{- if and .Params.public (not .Draft) -}}
     {{- $pages = $pages | append . -}}
   {{- end -}}
 {{- end -}}
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {{ range $pages }}
     <url>

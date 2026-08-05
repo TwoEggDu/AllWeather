@@ -1,19 +1,16 @@
 <footer class="site-footer">
   <div class="footer-main">
     <div>
-      <p class="eyebrow">Research Journal</p>
-      <p class="footer-title">{{ site.Title }}</p>
-      <p>{{ site.Params.tagline }}</p>
+      <p class="eyebrow">蜗牛全天候</p>
+      <p class="footer-title">{{ site.Params.tagline }}</p>
       <p>{{ site.Params.repoNote }}</p>
     </div>
     <div class="footer-links">
-      <a href="{{ printf "%s%s" site.BaseURL "posts/" }}">最新文章</a>
-      <a href="{{ printf "%s%s" site.BaseURL "topics/" }}">栏目总览</a>
-      <a href="{{ printf "%s%s" site.BaseURL "glossary/" }}">词汇表</a>
-      <a href="{{ printf "%s%s" site.BaseURL "disclaimer/" }}">免责声明</a>
-      {{ with site.Home.OutputFormats.Get "RSS" }}
-        <a href="{{ .Permalink }}">RSS</a>
-      {{ end }}
+      <a href="{{ "design/" | relURL }}">系统设计</a>
+      <a href="{{ "scope/" | relURL }}">第一阶段边界</a>
+      <a href="{{ "roadmap/" | relURL }}">路线图</a>
+      <a href="{{ "about/" | relURL }}">关于</a>
+      <a href="{{ "disclaimer/" | relURL }}">免责声明</a>
     </div>
   </div>
   <div class="footer-note">

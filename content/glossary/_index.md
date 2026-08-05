@@ -1,6 +1,14 @@
 ---
 title: 词汇表
 summary: 收录全球宏观与跨资产研究中最常见的基础术语，帮助建立统一语言。
+build:
+  render: never
+  list: never
+cascade:
+  build:
+    render: never
+    list: never
+    publishResources: false
 ---
 
 这不是百科全书，而是一份面向初学者的工作型词汇表。
