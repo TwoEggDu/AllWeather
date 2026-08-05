@@ -139,8 +139,8 @@ downstream_output: "none"
 
 ## 14. 延伸阅读
 
-- [宏观环境层总纲](/macro-layer/)
-- [宏观环境层阅读索引](/macro-index/)
+- [宏观层：判断共同环境与风险边界](/macro-layer/)
+- [宏观层内部阅读索引](/macro-index/)
 
 以下旧文章是待复核的基础材料，目前继续隐藏，不提供公开链接：
 

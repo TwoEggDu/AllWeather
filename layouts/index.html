@@ -29,7 +29,7 @@
 
   <section class="status-strip" aria-label="项目原则">
     <div><strong>宏观</strong><span>给出共同风险边界</span></div>
-    <div><strong>信号</strong><span>判断资产强弱</span></div>
+    <div><strong>信号</strong><span>描述市场与风险状态</span></div>
     <div><strong>纪律</strong><span>约束调整频率</span></div>
     <div><strong>复盘</strong><span>推动规则迭代</span></div>
   </section>
@@ -86,7 +86,7 @@
       <article class="layer-card">
         <span class="layer-index">03</span>
         <h3>信号层</h3>
-        <p>只看趋势、相对强弱、波动与回撤，不直接下单。</p>
+        <p>只描述趋势、相对强弱、波动与回撤风险，不生成权重或动作。</p>
       </article>
       <article class="layer-card">
         <span class="layer-index">04</span>
@@ -96,7 +96,7 @@
       <article class="layer-card">
         <span class="layer-index">05</span>
         <h3>执行层</h3>
-        <p>规定何时检查、调整或保持不动，默认低频执行。</p>
+        <p>按规则检查，默认不操作；条件满足时才形成低频模拟调整。</p>
       </article>
       <article class="layer-card">
         <span class="layer-index">06</span>
@@ -116,9 +116,9 @@
     </div>
     <div class="asset-grid">
       <article class="asset-card asset-cash"><span>流动性</span><h3>现金</h3><p>缓冲与等待机会</p></article>
-      <article class="asset-card asset-bond"><span>防守</span><h3>债券</h3><p>降低组合波动</p></article>
-      <article class="asset-card asset-dividend"><span>稳健权益</span><h3>红利</h3><p>权益底仓角色</p></article>
-      <article class="asset-card asset-index"><span>基础仓</span><h3>宽基</h3><p>市场 Beta 暴露</p></article>
+      <article class="asset-card asset-bond"><span>防守</span><h3>债券</h3><p>合同现金流与潜在下行缓冲</p></article>
+      <article class="asset-card asset-dividend"><span>权益角色</span><h3>红利</h3><p>稳健权益</p></article>
+      <article class="asset-card asset-index"><span>权益角色</span><h3>宽基</h3><p>基础权益暴露</p></article>
       <article class="asset-card asset-growth"><span>进攻</span><h3>成长主题</h3><p>受控的增长弹性</p></article>
       <article class="asset-card asset-gold"><span>对冲</span><h3>黄金</h3><p>货币与尾部风险</p></article>
     </div>
@@ -131,7 +131,7 @@
       <ul class="check-list">
         <li>用公开数据观察宏观与资产状态</li>
         <li>保存当时可见的信息和决策理由</li>
-        <li>按固定节奏做模拟调整与复盘</li>
+        <li>按可追溯节奏检查，并在条件满足时模拟调整</li>
         <li>允许“不操作”和“数据不足”</li>
       </ul>
     </article>
@@ -168,7 +168,7 @@
     <div>
       <p class="eyebrow">Current Priority</p>
       <h2>下一步不是算分，而是先让合作伙伴独立读懂。</h2>
-      <p>先用宏观总纲、中国增长、流动性与信用三篇文章验证职责、证据和边界是否清楚，再决定其余五篇怎样改造。</p>
+      <p>六层核心文章 V0.1 已形成。下一步让合作伙伴独立阅读，检查职责、证据和边界是否能够被一致理解。</p>
     </div>
     <a class="button button-primary" href="{{ "status/" | relURL }}">查看当前状态</a>
   </section>

@@ -23,7 +23,12 @@
 - `/`：项目首页与最小闭环总览
 - `/design/`：投资方法论总纲、六层职责与单向约束
 - `/system-loop/`：系统运转、问题分类、修改验证与回滚
-- `/macro-layer/`：宏观环境层字段与共同风险边界
+- `/macro-layer/`：宏观层的共同环境、六个内部模块与风险边界
+- `/asset-layer/`：六个资产桶的功能角色、风险和使用边界
+- `/signal-layer/`：趋势、相对强弱、波动与回撤风险状态
+- `/product-risk-budget-layer/`：共同判断怎样形成产品约束
+- `/execution-layer/`：检查、保持不动、模拟调整、暂停与恢复
+- `/review-layer/`：点时决策记录、结果复查和问题归因
 - `/middle-risk-product/`：蜗牛全天候·中波母产品概念卡
 - `/partner-review/`：合作伙伴独立阅读与反馈问题清单
 - `/scope/`：第一阶段范围、禁止事项和完成标准
