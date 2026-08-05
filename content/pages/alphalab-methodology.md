@@ -2,9 +2,9 @@
 title: AlphaLab 方法论
 url: /alphalab/methodology/
 summary: AlphaLab 如何提出假设、定义数据契约、完成历史与前向验证、控制风险并治理策略生命周期。
-status: draft
-draft: true
-public: false
+status: published
+draft: false
+public: true
 ---
 
 > 本页定义研究方法和证据门槛，不定义具体策略、数据源、参数或交易动作。
@@ -180,4 +180,4 @@ idea
 
 `Strategy-001：成长股选股` 仅完成名称、策略族和 `idea` 状态登记。它没有股票池、因子、权重、阈值、数据契约、历史结果或前向记录，因此不能被称为策略规则，更不能被称为已验证策略。
 
-详细字段见[策略假设卡模板](/alphalab/strategy-hypothesis-template/)，记录与治理格式见[实验、复盘与版本模板](/alphalab/experiment-and-review-template/)。
+详细字段见[策略假设卡模板]({{< relref "pages/alphalab-strategy-hypothesis-template.md" >}})，记录与治理格式见[实验、复盘与版本模板]({{< relref "pages/alphalab-experiment-and-review-template.md" >}})。

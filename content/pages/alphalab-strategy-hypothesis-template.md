@@ -2,9 +2,9 @@
 title: AlphaLab 策略假设卡模板
 url: /alphalab/strategy-hypothesis-template/
 summary: 将策略想法登记为带时点、证据、失效条件、验证计划和生命周期门槛的可证伪假设。
-status: draft
-draft: true
-public: false
+status: published
+draft: false
+public: true
 ---
 
 > 复制本模板时保留全部字段。缺失信息只能写“待验证”“待决定”“未知”或“暂无充分证据”，不得用虚构数字或默认值补齐。
@@ -136,5 +136,5 @@ strategy_version: 尚未建立
 
 ## 相关文档
 
-- [AlphaLab 方法论](/alphalab/methodology/)
-- [实验、复盘与版本模板](/alphalab/experiment-and-review-template/)
+- [AlphaLab 方法论]({{< relref "pages/alphalab-methodology.md" >}})
+- [实验、复盘与版本模板]({{< relref "pages/alphalab-experiment-and-review-template.md" >}})

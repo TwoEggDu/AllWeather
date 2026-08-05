@@ -2,9 +2,9 @@
 title: AlphaLab 实验、复盘与版本模板
 url: /alphalab/experiment-and-review-template/
 summary: 分开记录策略实验、前向模拟、收益归因、策略治理决定和系统方法论变更。
-status: draft
-draft: true
-public: false
+status: published
+draft: false
+public: true
 ---
 
 > 本页只提供空模板。A0 不创建实验结果、模拟交易、收益数字或策略版本。
@@ -268,6 +268,6 @@ A0 不启用主观 Override、自动调参、自动晋级、自动风险动作�
 
 ## 相关文档
 
-- [策略假设卡模板](/alphalab/strategy-hypothesis-template/)
-- [AlphaLab 方法论](/alphalab/methodology/)
-- [AlphaLab Roadmap](/alphalab/roadmap/)
+- [策略假设卡模板]({{< relref "pages/alphalab-strategy-hypothesis-template.md" >}})
+- [AlphaLab 方法论]({{< relref "pages/alphalab-methodology.md" >}})
+- [AlphaLab Roadmap]({{< relref "pages/alphalab-roadmap.md" >}})

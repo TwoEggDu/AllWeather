@@ -2,12 +2,12 @@
 title: AlphaLab 总览
 url: /alphalab/
 summary: AlphaLab 的定位、独立边界、研究闭环、策略类型、当前成熟度与阅读顺序。
-status: draft
-draft: true
-public: false
+status: published
+draft: false
+public: true
 ---
 
-> 内部方法论草稿 · V0.1。本文只描述研究纪律，不构成投资建议、交易指令、收益承诺或已经运行的策略。
+> 公开方法论评审稿 · V0.1。本文只描述研究纪律，不构成投资建议、交易指令、收益承诺或已经运行的策略。
 
 ## 一句话定位
 
@@ -59,17 +59,17 @@ AlphaLab 不是蜗牛全天候的第七层，也不是低波、中波或高波�
 
 ## 当前状态
 
-- 当前阶段：A0，方法论与边界 V0.1 草稿；
+- 当前阶段：A0，方法论与边界 V0.1 公开评审稿；
 - 当前能力：定义研究流程、验证问题、风险字段、日志模板和生命周期；
 - 尚未实现：标的池、数据源、策略规则、因子、参数、回测、前向模拟系统、实盘或产品连接；
 - `Strategy-001：成长股选股` 当前状态为 `idea`，即“想法 / 待研究”；
-- A0 草稿尚未经过合作伙伴独立阅读，因此“文档已写成”不等于“方法已被读懂或验证”。
+- A0 公开评审稿尚未经过合作伙伴独立阅读，因此“文档已写成”不等于“方法已被读懂或验证”。
 
 ## 推荐阅读顺序
 
 1. 本页：理解定位、隔离和闭环；
-2. [AlphaLab Scope](/alphalab/scope/)：确认本轮做什么、不做什么；
-3. [AlphaLab 方法论](/alphalab/methodology/)：理解数据、验证、风险、归因和生命周期；
-4. [策略假设卡模板](/alphalab/strategy-hypothesis-template/)：把想法改写成可证伪记录；
-5. [实验、复盘与版本模板](/alphalab/experiment-and-review-template/)：分开保存实验、模拟和系统决定；
-6. [AlphaLab Roadmap](/alphalab/roadmap/)：查看 A0—A5 的入口和退出条件。
+2. [AlphaLab Scope]({{< relref "pages/alphalab-scope.md" >}})：确认本轮做什么、不做什么；
+3. [AlphaLab 方法论]({{< relref "pages/alphalab-methodology.md" >}})：理解数据、验证、风险、归因和生命周期；
+4. [策略假设卡模板]({{< relref "pages/alphalab-strategy-hypothesis-template.md" >}})：把想法改写成可证伪记录；
+5. [实验、复盘与版本模板]({{< relref "pages/alphalab-experiment-and-review-template.md" >}})：分开保存实验、模拟和系统决定；
+6. [AlphaLab Roadmap]({{< relref "pages/alphalab-roadmap.md" >}})：查看 A0—A5 的入口和退出条件。

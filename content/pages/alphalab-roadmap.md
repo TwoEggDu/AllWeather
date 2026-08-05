@@ -1,10 +1,10 @@
 ---
 title: AlphaLab Roadmap
 url: /alphalab/roadmap/
-summary: AlphaLab A0—A5 的目标、入口条件、退出条件和当前状态；本轮只形成 A0 文档草稿。
-status: draft
-draft: true
-public: false
+summary: AlphaLab A0—A5 的目标、入口条件、退出条件和当前状态；当前形成 A0 V0.1 公开评审稿。
+status: published
+draft: false
+public: true
 ---
 
 > Roadmap 按证据门槛推进，不按日期、功能数量或收益结果推进。没有满足上一阶段退出条件，不提前实现下一阶段。
@@ -13,7 +13,7 @@ public: false
 
 | 阶段 | 目标 | 入口条件 | 退出条件 | 当前状态 |
 |---|---|---|---|---|
-| A0 · 方法论和边界 | 说清定位、隔离、研究闭环、验证、风险、日志和生命周期 | 仓库旧内容与现行治理完成审计 | 六份草稿一致；内容校验与构建通过；合作伙伴能独立回答 A0 验收问题 | **V0.1 草稿已形成，待独立阅读** |
+| A0 · 方法论和边界 | 说清定位、隔离、研究闭环、验证、风险、日志和生命周期 | 仓库旧内容与现行治理完成审计 | 六份文档一致；内容校验与构建通过；合作伙伴能独立回答 A0 验收问题 | **V0.1 公开评审稿，待独立阅读** |
 | A1 · 标的池与数据契约 | 决定研究范围及点时数据、缺失、修订、可交易性和幸存者处理 | A0 独立阅读通过，并有单独范围决定 | 每个字段可追溯来源、口径、真实可得时间和版本；仍不实现策略 | 未开始 |
 | A2 · Strategy-001 成长股选股规范 | 把候选想法改写成冻结、可证伪、可验证的策略规范 | A1 数据契约完成；Strategy-001 主要研究问题获得批准 | 研究对象、机制、输入输出、反证、失效、验证和风险问题完整；不代表策略有效 | 未开始 |
 | A3 · 历史验证框架 | 建立样本内、样本外、Walk-forward、成本、偏差和过拟合控制 | A2 规范冻结；另行批准验证实现范围 | 运行可复现；样本角色和尝试次数可审计；结果能被独立复核；不自动晋级 | 未开始 |
@@ -26,11 +26,11 @@ A0 入口所要求的旧内容与现行治理审计已在本轮完成；它是�
 
 A0 只交付：
 
-- [AlphaLab 总览](/alphalab/)；
-- [AlphaLab Scope](/alphalab/scope/)；
-- [AlphaLab 方法论](/alphalab/methodology/)；
-- [策略假设卡模板](/alphalab/strategy-hypothesis-template/)；
-- [实验、复盘与版本模板](/alphalab/experiment-and-review-template/)；
+- [AlphaLab 总览]({{< relref "pages/alphalab.md" >}})；
+- [AlphaLab Scope]({{< relref "pages/alphalab-scope.md" >}})；
+- [AlphaLab 方法论]({{< relref "pages/alphalab-methodology.md" >}})；
+- [策略假设卡模板]({{< relref "pages/alphalab-strategy-hypothesis-template.md" >}})；
+- [实验、复盘与版本模板]({{< relref "pages/alphalab-experiment-and-review-template.md" >}})；
 - 本 Roadmap。
 
 A0 不把文字完成误写成方法有效。只有合作伙伴不依赖作者解释，也能分清假设、验证、风险、晋级和淘汰，才能评估是否进入 A1。

@@ -2,9 +2,9 @@
 title: AlphaLab Scope
 url: /alphalab/scope/
 summary: AlphaLab A0 当前做什么、不做什么、风险边界、完成标准与强制停止条件。
-status: draft
-draft: true
-public: false
+status: published
+draft: false
+public: true
 ---
 
 > 本页约束 AlphaLab A0。未写入本页的扩展不因技术上可行而自动获得授权。
@@ -55,7 +55,7 @@ AlphaLab 可以研究高进攻性、高波动和高回撤策略，但所有风�
 
 ## A0 完成标准
 
-独立读者应当能够仅依靠这六份草稿回答：
+独立读者应当能够仅依靠这六份公开评审文档回答：
 
 - AlphaLab 是什么，为什么独立于蜗牛全天候；
 - 它研究哪三类策略，以及三类策略如何分开；
@@ -68,7 +68,7 @@ AlphaLab 可以研究高进攻性、高波动和高回撤策略，但所有风�
 - 当前哪些能力尚未实现；
 - 为什么 Strategy-001 仍然只是候选想法。
 
-只有读者能一致回答这些问题、指出的矛盾已被处理，并且六份文档通过内容校验和构建，A0 草稿才具备进入评审的条件。评审通过与否仍由合作伙伴独立阅读决定。
+只有读者能一致回答这些问题、指出的矛盾已被处理，并且六份文档通过内容校验和构建，A0 V0.1 才具备完成评审的条件。评审通过与否仍由合作伙伴独立阅读决定。
 
 ## 何时允许扩大范围
 
@@ -80,6 +80,6 @@ AlphaLab 可以研究高进攻性、高波动和高回撤策略，但所有风�
 
 ## 相关文档
 
-- [AlphaLab 总览](/alphalab/)
-- [AlphaLab 方法论](/alphalab/methodology/)
-- [AlphaLab Roadmap](/alphalab/roadmap/)
+- [AlphaLab 总览]({{< relref "pages/alphalab.md" >}})
+- [AlphaLab 方法论]({{< relref "pages/alphalab-methodology.md" >}})
+- [AlphaLab Roadmap]({{< relref "pages/alphalab-roadmap.md" >}})
