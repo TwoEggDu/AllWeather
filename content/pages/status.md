@@ -49,6 +49,12 @@ public: true
 
 六层核心文章已经互相引用，并完成了职责、输入、输出、失败状态和禁止事项的 V0.1 定义，但仍需真实合作伙伴独立阅读。完成文档不等于方法有效，也不等于任何指标、参数、产品规则或执行规则已经验证。
 
+## M1 预备材料
+
+2026-08-05 已形成六份公开评审的预备草稿：[M0 关闭记录]({{< relref "pages/m0-partner-review-closeout.md" >}})、[最小数据契约总览]({{< relref "pages/data-contract-overview.md" >}})、[点时数据与修订规则]({{< relref "pages/point-in-time-data-and-revisions.md" >}})、[中国增长最小数据契约]({{< relref "pages/china-growth-data-contract.md" >}})、[六个资产桶市场数据契约]({{< relref "pages/asset-bucket-market-data-contract.md" >}})，以及[第一次中国增长点时回放]({{< relref "pages/first-growth-point-in-time-replay.md" >}})。
+
+M0 关闭记录的结论是“未关闭”；第一次回放的结论是 `SNAPSHOT_NOT_REPRODUCIBLE`。这些页面已经进入公开构建，但公开只表示允许独立阅读与质疑，不表示 M1 已正式开始。数据源、实际可得时间、不可变快照、采集链路和任何状态规则仍未实现或验证。
+
 ## 旧内容状态
 
 旧文章、宏观材料、组合模板、风险闸门和基金机器人资料继续保留。它们只能作为方法论素材或候选规则，不能自动升级为当前参数、产品结论或投资建议。
@@ -56,7 +62,7 @@ public: true
 ## 尚未实现
 
 - 合作伙伴独立阅读和反馈记录；
-- 宏观及行情数据源与点时可得性清单；
+- 宏观及行情数据源接入、实际可得时间记录与不可变快照；
 - 宏观指标、评分、权重或具体阈值；
 - 六个资产桶的代表指数和具体 ETF；
 - 中波产品的完整规则、权重和风险参数；
