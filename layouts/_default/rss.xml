@@ -16,7 +16,7 @@
     <link>{{ .Permalink }}</link>
     <description>{{ with .Params.summary }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}</description>
     {{ with .OutputFormats.Get "RSS" }}<atom:link href="{{ .Permalink }}" rel="self" type="application/rss+xml" />{{ end }}
-    {{ with site.LanguageCode }}<language>{{ . }}</language>{{ end }}
+    {{ with site.Language.Locale }}<language>{{ . }}</language>{{ end }}
     {{ range first 25 $pages }}
       <item>
         <title>{{ .Title }}</title>

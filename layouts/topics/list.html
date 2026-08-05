@@ -12,7 +12,7 @@
   </section>
 
   <section class="topic-grid">
-    {{ range site.Data.topics }}
+    {{ range hugo.Data.topics }}
       {{ $topicPosts := where $posts "Params.category" .name }}
       {{ partial "topic-card.html" (dict "topic" . "count" (len $topicPosts) "posts" $topicPosts) }}
     {{ end }}
