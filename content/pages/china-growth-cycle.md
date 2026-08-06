@@ -142,12 +142,12 @@ downstream_output: "none"
 - [宏观层：判断共同环境与风险边界](/macro-layer/)
 - [宏观层内部阅读索引](/macro-index/)
 
-以下旧文章是待复核的基础材料，目前继续隐藏，不提供公开链接：
+以下公开文章可作为概念、数据解读和机制背景的延伸阅读：
 
-- “增长、通胀、流动性：投资最基础的三条线”——`growth-inflation-liquidity-basics.md`；
-- “PMI 为什么经常领先于部分风险资产”——`pmi-leading-risk-assets.md`；
-- “中国 PMI 怎么看：官方 PMI 和财新 PMI 有什么区别”——`how-to-read-china-pmi-official-vs-caixin.md`；
-- “为什么房地产在中国宏观里如此重要”——`why-real-estate-matters-in-china.md`；
-- “中国贸易数据和汇率之间的关系怎么看”——`how-to-read-china-trade-data-and-rmb.md`。
+- [增长、通胀、流动性：投资最基础的三条线](/posts/growth-inflation-liquidity-basics/)
+- [PMI 为什么经常领先于部分风险资产](/posts/pmi-leading-risk-assets/)
+- [中国 PMI 怎么看：官方 PMI 和财新 PMI 有什么区别](/posts/how-to-read-china-pmi-official-vs-caixin/)
+- [为什么房地产在中国宏观里如此重要](/posts/why-real-estate-matters-in-china/)
+- [中国贸易数据和汇率之间的关系怎么看](/posts/how-to-read-china-trade-data-and-rmb/)
 
-这些材料不是蜗牛全天候的现行状态或交易规则；其中的数据口径、结论和资产表达仍需单独复核。
+这些文章不是蜗牛全天候的现行状态、系统规则或交易指令；其中的数据口径、结论和资产表达仍需单独核验。

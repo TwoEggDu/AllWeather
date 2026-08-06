@@ -2,7 +2,7 @@
 
 ## 背景
 
-`content/pages/china-growth-cycle.md` 把五篇旧文章列为“继续隐藏”，但五篇文章当前均为 `status: published`、`draft: false`，内容校验也已通过。宏观内容复用审计已将它们定位为基础材料或延伸阅读，因此当前页面文案与文章状态、审计用途不一致。
+`content/pages/china-growth-cycle.md` 把五篇旧文章列为“继续隐藏”。五篇文章当前均为 `status: published`、`draft: false`，内容校验也已通过，但 `content/posts/_index.md` 的 `render: never` cascade 仍阻止 Hugo 生成这些页面。宏观内容复用审计已将它们定位为基础材料或延伸阅读，因此需要同时恢复页面渲染与阅读入口。
 
 ## 目标
 
@@ -21,13 +21,17 @@
 
 ## 具体变更
 
-只修改 `content/pages/china-growth-cycle.md`：
+修改 `content/pages/china-growth-cycle.md`：
 
 - 使用 `/posts/<slug>/` 形式链接五篇文章，保持与仓库现有站内链接一致。
 - 删除“目前继续隐藏，不提供公开链接”的过时表述。
 - 保留并收紧边界说明：文章仅作基础或延伸阅读，其中的数据口径、结论和资产表达仍需独立核验，不能当作现行状态或交易规则。
 
-五篇目标文章的 front matter 不变。
+修改五篇目标文章的 front matter：
+
+- 分别增加 `build.render: always`，逐篇覆盖 posts 区域的隐藏 cascade。
+- 保持文章正文、`status`、`draft` 及其他元数据不变。
+- 不修改 `content/posts/_index.md`，避免误开放其余旧文章。
 
 ## 验收
 
@@ -35,4 +39,5 @@
 - 页面不再声称这些文章处于隐藏状态。
 - `node scripts/validate-content.mjs` 通过。
 - Hugo 构建通过，并确认五个目标页面及增长周期页都生成对应 HTML。
+- Hugo 构建没有生成其他 posts 页面。
 - 不触碰工作区中与本任务无关的未跟踪文件。

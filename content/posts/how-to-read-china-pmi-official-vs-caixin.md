@@ -13,6 +13,8 @@ tags:
 level: beginner
 status: published
 draft: false
+build:
+  render: always
 ---
 
 ## 这篇文章要回答的问题是什么
