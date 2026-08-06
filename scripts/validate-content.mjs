@@ -240,10 +240,49 @@ async function main() {
     const relativeFromRepo = normalizePath(path.relative(repoRoot, fullPath));
     const relativeFromContent = normalizePath(path.relative(contentDir, fullPath));
     const source = await readFile(fullPath, "utf8");
-    const { data, issues } = parseFrontmatter(source, relativeFromRepo);
+    const { data, body, issues } = parseFrontmatter(source, relativeFromRepo);
 
     if (issues.length > 0) {
       continue;
+    }
+
+    if (!relativeFromContent.startsWith("posts/")) {
+      const publicationIssues = [];
+      const status = normalizeScalar(data.status);
+      const draft = normalizeScalar(data.draft);
+      const isPublic = normalizeScalar(data.public) === "true";
+
+      if (status && !["draft", "published"].includes(status)) {
+        publicationIssues.push(`status 只能是 draft 或 published，当前为：${data.status}`);
+      }
+
+      if (draft && !["true", "false"].includes(draft)) {
+        publicationIssues.push(`draft 只能是 true 或 false，当前为：${data.draft}`);
+      }
+
+      if (status === "published" && draft !== "false") {
+        publicationIssues.push(`status/draft 不一致：published 页面必须是 draft: false，当前为 draft: ${data.draft}`);
+      }
+
+      if (status === "draft" && draft !== "true") {
+        publicationIssues.push(`status/draft 不一致：draft 页面必须是 draft: true，当前为 draft: ${data.draft}`);
+      }
+
+      if (status === "published") {
+        publishedCount += 1;
+      }
+
+      if (status === "published" || (isPublic && draft !== "true")) {
+        for (const token of placeholderTokens) {
+          if (body.includes(token)) {
+            publicationIssues.push(`公开页面仍包含原始占位符：${token}`);
+          }
+        }
+      }
+
+      if (publicationIssues.length > 0) {
+        allIssues.push({ fileName: relativeFromRepo, issues: publicationIssues });
+      }
     }
 
     validInternalTargets.add(resolveOutputUrl(relativeFromContent, data));
@@ -287,7 +326,7 @@ async function main() {
   }
 
   if (allIssues.length > 0) {
-    console.error(`内容校验失败：共检查 ${postFiles.length} 篇文章，发现 ${allIssues.length} 篇存在问题。`);
+    console.error(`内容校验失败：共扫描 ${contentFiles.length} 个 Markdown 内容文件，发现 ${allIssues.length} 个文件存在问题。`);
     console.error("");
 
     for (const item of allIssues) {
@@ -301,7 +340,7 @@ async function main() {
     return;
   }
 
-  console.log(`内容校验通过：共检查 ${postFiles.length} 篇文章，其中 ${publishedCount} 篇为已发布状态。`);
+  console.log(`内容校验通过：共扫描 ${contentFiles.length} 个 Markdown 内容文件，其中 ${publishedCount} 个声明为已发布状态。`);
 }
 
 main().catch((error) => {
