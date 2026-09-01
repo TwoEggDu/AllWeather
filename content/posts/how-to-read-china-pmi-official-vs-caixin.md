@@ -105,5 +105,5 @@ PMI 连续 6 个月在 51 并不意味着"增长停滞"，而是意味着过半�
 ## 延伸阅读
 
 - [PMI 领先资产价格多久](/posts/pmi-leading-risk-assets/)
-- [中国的 CPI 和 PPI 为什么经常背离](/posts/why-china-cpi-and-ppi-diverge/)
-- [PMI](/glossary/pmi/)
+- [中国增长与周期：从数据到宏观层判断](/china-growth-cycle/)
+- [为什么“美林投资时钟”不能直接照搬到中国？](/posts/four-phases-of-economic-cycle/)

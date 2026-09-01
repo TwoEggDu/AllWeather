@@ -102,7 +102,6 @@ PBoC 通过每日设定中间价和使用逆周期因子来引导汇率预期。
 
 ## 延伸阅读
 
-- [什么在驱动人民币汇率](/posts/what-drives-the-rmb/)
 - [中国 PMI 怎么看：官方 PMI 和财新 PMI 有什么区别](/posts/how-to-read-china-pmi-official-vs-caixin/)
-- [货币对交叉汇率的宏观含义](/posts/currency-crosses-for-relative-macro-views/)
-- [美元指数](/glossary/dollar-index/)
+- [中国流动性与信用：从货币到融资条件](/china-liquidity-credit/)
+- [中国增长与周期：从数据到宏观层判断](/china-growth-cycle/)

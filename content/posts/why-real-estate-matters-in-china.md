@@ -96,6 +96,6 @@ build:
 
 ## 延伸阅读
 
-- [社融和信贷脉冲怎么看](/posts/how-to-read-tsf-and-credit-impulse-in-china/)
-- [地方政府与城投在中国宏观里意味着什么](/posts/why-lgfvs-matter-in-china-macro/)
-- [中国的财政发力怎么看](/posts/how-to-read-china-fiscal-policy/)
+- [中国流动性与信用：从货币到融资条件](/china-liquidity-credit/)
+- [中国增长与周期：从数据到宏观层判断](/china-growth-cycle/)
+- [为什么“美林投资时钟”不能直接照搬到中国？](/posts/four-phases-of-economic-cycle/)

@@ -79,6 +79,5 @@ PMI 不是万能领先指标：
 ## 延伸阅读
 
 - [增长、通胀、流动性：投资最基础的三条线](/posts/growth-inflation-liquidity-basics/)
-- [同一个判断在不同周期阶段应该用不同工具](/posts/same-view-different-instruments-across-cycle/)
-- [PMI](/glossary/pmi/)
-- [风险偏好](/glossary/risk-appetite/)
+- [中国增长与周期：从数据到宏观层判断](/china-growth-cycle/)
+- [资金、趋势与拥挤度：市场行为能告诉我们什么](/market-flows-trend-crowding/)

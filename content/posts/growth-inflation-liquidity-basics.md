@@ -76,8 +76,6 @@ build:
 
 ## 延伸阅读
 
-- [通胀预期和实际通胀有什么区别](/posts/inflation-expectations-vs-realized-inflation/)
-- [金融条件到底是什么](/posts/what-financial-conditions-are/)
-- [GDP](/glossary/gdp/)
-- [怎么把多个宏观观点组合成一个组合](/posts/how-to-combine-multiple-macro-views-into-a-portfolio/)
-- [CPI](/glossary/cpi/)
+- [中国增长与周期：从数据到宏观层判断](/china-growth-cycle/)
+- [从政策利好到股东回报：企业盈利周期怎么验证](/corporate-earnings-cycle/)
+- [好公司为什么也会亏钱：估值与预期差](/posts/how-to-value-a-stock/)
